@@ -1,44 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sarah Loya - BTS Addict</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Subtle shadow for profile image */
-        .profile-img {
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-        /* Button Hover Effect */
-        .btn-primary:hover {
-            background-color: #3b82f6; /* Blue shade */
-            color: #fff;
-        }
-        .btn-secondary:hover {
-            border-color: #3b82f6;
-            color: #3b82f6;
-        }
-    </style>
-</head>
-<body class="bg-gray-50 text-gray-900 font-sans">
-
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Robert Niemela - Full-Stack Engineer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <!-- Hero Section -->
-    <section class="h-screen flex items-center justify-center bg-gray-100">
-        <div class="text-center px-4">
-            <!-- Profile Image -->
-            <img src="https://via.placeholder.com/150" alt="Profile Image" class="profile-img rounded-full w-32 h-32 mx-auto mb-6">
-            <!-- Name -->
-            <h1 class="text-4xl sm:text-5xl font-bold mb-4">John Doe</h1>
-            <!-- Tagline -->
-            <p class="text-lg sm:text-xl mb-6">BTS Addict | </p>
-            <!-- Call to Action Buttons -->
-            <div class="space-x-4">
-                <a href="#projects" class="btn-primary bg-blue-600 text-white px-6 py-3 rounded-full text-lg font-semibold inline-block">View Projects</a>
-                <a href="#contact" class="btn-secondary border-2 border-blue-600 text-blue-600 px-6 py-3 rounded-full text-lg font-semibold inline-block">Leave</a>
-            </div>
+    <section class="hero">
+      <div class="container">
+        <!-- Profile Image -->
+        <img
+          src="https://avatars.githubusercontent.com/u/84466763?s=400&u=fbf5162e12b7a53092ba010dd7a3fd6639f8dbc5&v=4"
+          alt="Profile Image"
+          class="profile-img"
+        />
+        <!-- Name -->
+        <h1 class="name">Robert Niemela</h1>
+        <!-- Tagline -->
+        <p class="tagline">Full-Stack Developer &amp; Software Engineer</p>
+        <!-- Call to Action Buttons -->
+        <div class="cta-buttons">
+          <a href="#projects" class="btn btn-primary">View Projects</a>
+          <a href="#contact" class="btn btn-secondary">Contact Me</a>
         </div>
+      </div>
     </section>
 
-</body>
+    <section>
+      <div class="container">
+        <h2>About Me</h2>
+        <p>
+          Hello! I'm Robert Niemela, a Full-Stack Developer &amp; Software
+          Engineer.
+        </p>
+
+        <ul>
+          <li><b>Languages:</b> JavaScript, PHP</li>
+          <li><b>Frameworks/Libraries:</b> Vue.js, Laravel</li>
+          <li><b>Front-End:</b> HTML, CSS, Responsive Design</li>
+          <li><b>Back-End:</b> RESTful APIs, MySQL</li>
+          <li><b>Tools:</b> Git, Adobe Creative Suite</li>
+          <li><b>Practices:</b> Agile</li>
+          <li>
+            <b>Soft Skills:</b> Problem-Solving, Communication, Collaboration,
+            Adaptability
+          </li>
+        </ul>
+      </div>
+    </section>
+  </body>
 </html>
