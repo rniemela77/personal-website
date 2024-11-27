@@ -185,7 +185,7 @@
             <path d="M12 15.41L18.59 9 20 10.41 12 18.41 4 10.41 5.41 9z" />
             <path d="M0 0h24v24H0z" fill="none" />
           </svg>
-        </div>
+        </button>
       </section>
 
       <section id="skills">
@@ -255,10 +255,49 @@
           </div>
 
           <div class="project">
-            <h3>Project Two</h3>
+            <h3>MyCareerAdvisor.com - Career Development Platform</h3>
+            <small>Vue.js, Laravel, Cypress, SQL</small>
+            <h4>Description:</h4>
             <p>
-              A brief explanation of this project and the challenges I tackled.
+              Developed and enhanced a career development platform offering
+              online training, resource links, a resume builder, and more.
+              Transitioned from a mono-repo to a decoupled architecture while
+              optimizing performance and scalability.
             </p>
+
+            <h4>Role:</h4>
+            <p>
+              Full-Stack Developer - Built and maintained a Vue.js frontend and
+              Laravel backend, implemented new features, optimized SQL queries,
+              and improved site navigation using Vue Router for a seamless
+              SPA-like experience.
+            </p>
+
+            <h4>Technologies:</h4>
+            <p>
+              Vue.js, Laravel, SQL, Cypress, Laravel Nova, REST APIs, Husky,
+              CI/CD.
+            </p>
+
+            <h4>Key Contributions:</h4>
+            <ul>
+              <li>
+                Developed APIs to support dynamic functionality and enhanced
+                user experience.
+              </li>
+              <li>
+                Implemented Cypress end-to-end testing and Husky hooks for CI/CD
+                workflows.
+              </li>
+              <li>
+                Brought in Pinia for state management, improving performance and
+                scalability.
+              </li>
+              <li>
+                Transitioned architecture toward decoupling for greater
+                modularity.
+              </li>
+            </ul>
           </div>
         </div>
       </section>
@@ -280,13 +319,13 @@
     </main>
 
     <script>
-      const downIndicator = document.querySelector('.down-indicator');
+      const downIndicator = document.querySelector(".down-indicator");
 
       // gradual fade when scrolling
-      window.addEventListener('scroll', () => {
+      window.addEventListener("scroll", () => {
         const scrollY = window.scrollY;
         const bioHeight = downIndicator.clientHeight;
-        const opacity = 1 - scrollY / bioHeight * 0.15;
+        const opacity = 1 - (scrollY / bioHeight) * 0.15;
         downIndicator.style.opacity = opacity;
 
         // if its focused keep oapcity at 1
@@ -296,14 +335,14 @@
       });
 
       // on clicking down indicator, scroll to next section
-      downIndicator.addEventListener('click', () => {
-        const bio = document.querySelector('.bio');
+      downIndicator.addEventListener("click", () => {
+        const bio = document.querySelector(".bio");
         const bioHeight = bio.clientHeight;
         const scrollY = window.scrollY;
 
         window.scrollTo({
           top: bioHeight + scrollY,
-          behavior: 'smooth',
+          behavior: "smooth",
         });
       });
     </script>
