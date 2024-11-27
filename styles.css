@@ -6,6 +6,7 @@ body {
   padding: 0;
   line-height: 1.6;
 }
+
 /* Links */
 a {
   transition: all 0.2s;
@@ -34,21 +35,26 @@ img {
   border: 7px solid #e0e0e0;
 }
 
-section {
-  margin-bottom: 50px;
+section:not(:first-of-type) {
+  margin-bottom: 5rem;
 }
 
 /* Personal Summary */
 .bio {
   display: flex;
   justify-content: center;
-  min-height: 90vh;
+  min-height: 95vh;
   align-items: center;
+  position: relative;
 }
 .bio .portrait-text {
   display: flex;
   justify-content: center;
   gap: 4rem;
+}
+.bio .portrait-text h1:hover:after {
+  content: " :)";
+  color: #06aa73;
 }
 .bio hr {
   margin: 3rem 0;
@@ -70,6 +76,15 @@ section {
   align-items: center;
   display: inline-flex;
   justify-content: flex-start;
+}
+.down-indicator {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  border: none;
+  background: none;
+  cursor: pointer;
 }
 
 /* Skills */
