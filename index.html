@@ -188,6 +188,84 @@
         </button>
       </section>
 
+      <section id="education">
+        <h2>Education</h2>
+        <p>2020 - AAS in Web Design from Mesa Community College</p>
+      </section>
+
+      <section id="experience">
+        <h2>Experience</h2>
+
+        <div class="experience">
+          <h3>
+            Software Engineer II at Goodwill of Northern and Central Arizona
+          </h3>
+
+          <h4>June 2022 - Current</h4>
+
+          <h4>Technologies:</h4>
+          <p>Vue.js, Laravel, Cypress, SQL.</p>
+
+          <h4>Responsibilities:</h4>
+          <p>
+            Built and maintained a Vue.js frontend and Laravel backend,
+            implemented new features, optimized SQL queries, and improved site
+            navigation using Vue Router for a seamless SPA-like experience.
+          </p>
+
+          <h4>Accomplishments:</h4>
+          <ul>
+            <li>
+              Developed APIs to support dynamic functionality and enhanced user
+              experience.
+            </li>
+            <li>
+              Implemented Cypress end-to-end testing and Husky hooks for CI/CD
+              workflows.
+            </li>
+            <li>
+              Integrated Vuelidate for form validation, improving user
+              experience and data integrity.
+            </li>
+            <li>
+              Brought in Pinia for state management, improving performance and
+              scalability.
+            </li>
+            <li>
+              Transitioned architecture toward decoupling for greater
+              modularity.
+            </li>
+          </ul>
+        </div>
+
+        <div class="experience">
+          <h3>Developer at Chapman Automotive Group</h3>
+          <h4>May 2021 - April 2022</h4>
+
+          <h4>Technologies:</h4>
+          <p>Nuxt.js, Vue.js, Sass, Jest, REST APIs.</p>
+
+          <h4>Responsibilities:</h4>
+          <p>
+            As a Developer at Chapman Automotive Group, I was responsible for
+            developing the front-end of a car dealership platform that allows
+            users to browse, filter, and purchase from their inventory.
+          </p>
+
+          <h4>Accomplishments:</h4>
+          <ul>
+            <li>
+              Built custom, pixel-perfect pages with Nuxt.js and Vue.js,
+              matching design specifications and ensuring responsive styling
+              using Sass.
+            </li>
+            <li>
+              Wrote comprehensive unit tests using Jest to ensure code quality.
+            </li>
+          </ul>
+        </div>
+      </section>
+
       <section id="skills">
         <h2>Skills & Tools</h2>
         <ul>
@@ -204,119 +282,39 @@
         </ul>
       </section>
 
-      <section id="projects">
-        <h2>Projects</h2>
-        <div class="projects">
-          <div class="project">
-            <h3>Chapman Car Dealership Inventory Platform</h3>
-
-            <small>Nuxt.js, Vue.js, Sass, Jest</small>
-
-            <div>
-              <h4>Description:</h4>
-              <p>
-                Developed the front-end of a car dealership platform that allows
-                users to browse and filter inventory.
-              </p>
-            </div>
-
-            <div>
-              <h4>Role:</h4>
-              <p>
-                Web Developer - Built custom, pixel-perfect pages with Nuxt.js
-                and Vue.js, matching design specifications and ensuring
-                responsive styling using Sass.
-              </p>
-            </div>
-
-            <div>
-              <h4>Technologies:</h4>
-              <p>Nuxt.js, Vue.js, Sass, Jest, REST APIs.</p>
-            </div>
-
-            <div>
-              <h4>Key Contributions:</h4>
-
-              <ul>
-                <li>
-                  Created new pages from scratch, implementing responsive,
-                  pixel-perfect layouts.
-                </li>
-                <li>
-                  Integrated dynamic data from APIs for up-to-date vehicle
-                  listings.
-                </li>
-                <li>
-                  Wrote comprehensive unit tests using Jest to ensure code
-                  quality.
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <div class="project">
-            <h3>MyCareerAdvisor.com - Career Development Platform</h3>
-            <small>Vue.js, Laravel, Cypress, SQL</small>
-            <h4>Description:</h4>
-            <p>
-              Developed and enhanced a career development platform offering
-              online training, resource links, a resume builder, and more.
-              Transitioned from a mono-repo to a decoupled architecture while
-              optimizing performance and scalability.
-            </p>
-
-            <h4>Role:</h4>
-            <p>
-              Full-Stack Developer - Built and maintained a Vue.js frontend and
-              Laravel backend, implemented new features, optimized SQL queries,
-              and improved site navigation using Vue Router for a seamless
-              SPA-like experience.
-            </p>
-
-            <h4>Technologies:</h4>
-            <p>
-              Vue.js, Laravel, SQL, Cypress, Laravel Nova, REST APIs, Husky,
-              CI/CD.
-            </p>
-
-            <h4>Key Contributions:</h4>
-            <ul>
-              <li>
-                Developed APIs to support dynamic functionality and enhanced
-                user experience.
-              </li>
-              <li>
-                Implemented Cypress end-to-end testing and Husky hooks for CI/CD
-                workflows.
-              </li>
-              <li>
-                Brought in Pinia for state management, improving performance and
-                scalability.
-              </li>
-              <li>
-                Transitioned architecture toward decoupling for greater
-                modularity.
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
       <section id="contact">
         <h2>Contact</h2>
-        <form class="contact-form">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <textarea
-            name="message"
-            rows="5"
-            placeholder="Your Message"
-            required
-          ></textarea>
-          <button type="submit">Submit</button>
+        <p>
+          <i
+            >Feel free to reach out to me with any questions or
+            opportunities.</i
+          >
+        </p>
+
+        <form
+          class="contact-form"
+          name="contact"
+          method="POST"
+          data-netlify="true"
+        >
+          <label for="subject">Subject:</label><br />
+          <input type="text" id="subject" name="subject" required /><br /><br />
+
+          <label for="email">Email:</label><br />
+          <input type="email" id="email" name="email" required /><br /><br />
+
+          <label for="message">Message:</label><br />
+          <textarea id="message" name="message" rows="5" required></textarea
+          ><br /><br />
+
+          <button type="submit">Send</button>
         </form>
       </section>
     </main>
+
+    <footer>
+      <p>&copy; 2024 Robert Niemela</p>
+    </footer>
 
     <script>
       const downIndicator = document.querySelector(".down-indicator");

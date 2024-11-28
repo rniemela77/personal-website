@@ -87,6 +87,16 @@ section:not(:first-of-type) {
   cursor: pointer;
 }
 
+.experience {
+  margin-bottom: 3rem;
+  border-left: 4px solid rgb(202 209 225);
+  padding-left: 1rem;
+}
+.experience > * {
+  margin-bottom: 0rem;
+  margin-top: 0.25rem;
+}
+
 /* Skills */
 #skills ul {
   gap: 2rem;
@@ -97,28 +107,23 @@ section:not(:first-of-type) {
   justify-content: center;
 }
 #skills li {
-  flex: 1 1 30%;
+  flex: 1 1 25%;
   flex-direction: column;
   display: flex;
 }
 
-/* Projects */
-.projects {
-  /* display: grid; */
-  /* grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-  /* gap: 20px; */
-}
-.project {
+.card {
   background-color: #fff;
   padding: 15px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   transition: box-shadow 0.3s;
   margin-bottom: 1rem;
+  border-radius: 8px;
 }
-.project p {
+.card p {
   margin-top: 0;
 }
-.project h4 {
+.card h4 {
   margin-bottom: 0;
 }
 
