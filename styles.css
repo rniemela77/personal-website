@@ -155,3 +155,6 @@ footer {
   background-color: #fff;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
 }
+.text-blue {
+  color: #007bff;
+}
