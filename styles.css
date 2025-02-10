@@ -31,7 +31,7 @@ a:focus {
   padding: 20px;
 }
 
-img {
+img:not([src^="assets/"]) {
   border: 7px solid #e0e0e0;
 }
 
