@@ -101,21 +101,20 @@ section:not(:first-of-type) {
   cursor: pointer;
 }
 
-.experience {
+.experience, .project {
   margin-bottom: 3rem;
   border-left: 4px solid rgb(202 209 225);
   padding-left: 1rem;
 }
-.experience > * {
+.experience > *, .project * {
   margin-bottom: 0rem;
   margin-top: 0.25rem;
 }
-.experience ul {
+.experience ul, .project ul {
   padding-left: 1.5rem;
   list-style-type:square;
 }
-/* make each li's initial square teal */
-.experience li::marker {
+.experience li::marker, .project li::marker {
   color: #06aa73;
 }
 
