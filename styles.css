@@ -152,6 +152,9 @@ section:not(:first-of-type) {
 }
 
 /* Contact */
+#contact p {
+  margin-bottom: 1rem;
+}
 .contact-form input,
 .contact-form textarea {
   width: 100%;
