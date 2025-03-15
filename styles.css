@@ -111,11 +111,14 @@ section:not(:first-of-type) {
   margin-top: 0.25rem;
 }
 .experience ul, .project ul {
-  padding-left: 1.5rem;
+  padding-left: 2rem;
   list-style-type:square;
 }
 .experience li::marker, .project li::marker {
   color: #06aa73;
+}
+.experience p, .project p {
+  margin-bottom: 1rem;
 }
 
 /* Skills */
@@ -175,4 +178,24 @@ footer {
   padding: 20px;
   background-color: #fff;
   box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.experience-date {
+  background-color: rgb(202 209 225);
+  padding: 0.25rem 0.5rem;
+  display: inline-block;
+  transform: translateX(-1rem);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+.experience-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.experience-promoted {
+  margin-bottom:1.2rem;
+  font-size: 0.9rem;
 }
