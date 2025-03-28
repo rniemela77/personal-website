@@ -298,3 +298,78 @@ footer {
   right: 0;
   z-index: 1000;
 }
+
+/* Modal Image Viewer */
+.image-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  z-index: 2000;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.modal-content {
+  position: relative;
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.modal-image {
+  width: 100%;
+  height: auto;
+  max-height: 90vh;
+  object-fit: contain;
+  border: 7px solid #e0e0e0;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-close {
+  position: absolute;
+  top: -40px;
+  right: -40px;
+  color: #f5f5f5;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+  text-shadow: none;
+}
+
+.modal-close:hover {
+  color: #06aa73;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+/* Make project images appear clickable */
+.project-image .image-with-reflection > img {
+  transition: transform 0.2s;
+}
+
+.project-image .image-with-reflection > img:hover {
+  transform: scale(1.02);
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    max-width: 95%;
+  }
+  
+  .modal-close {
+    top: -30px;
+    right: 0;
+  }
+}
