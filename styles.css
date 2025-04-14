@@ -137,9 +137,23 @@ section:not(:first-of-type) {
 }
 
 .project {
-  display: flex;
+  display: none !important;
+  animation: fadeEffect 0.5s;
   flex-wrap: wrap;
   gap: 1.5rem;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease;
+  mix-blend-mode: multiply;
+}
+
+.project.active {
+  display: flex !important;
+  opacity: 1;
+  height: auto;
+  overflow: visible;
+  mix-blend-mode: multiply;
 }
 
 .project-info {
@@ -180,7 +194,6 @@ section:not(:first-of-type) {
   position: relative;
   height: 80px;
   overflow: hidden;
-  mix-blend-mode: multiply;
 }
 
 .reflection img {
@@ -426,24 +439,6 @@ footer {
   width: 100%;
   overflow: hidden;
   margin-top: 20px;
-}
-
-.project {
-  display: none !important;
-  animation: fadeEffect 0.5s;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  opacity: 0;
-  height: 0;
-  overflow: hidden;
-  transition: opacity 0.3s ease;
-}
-
-.project.active {
-  display: flex !important;
-  opacity: 1;
-  height: auto;
-  overflow: visible;
 }
 
 @keyframes fadeEffect {
