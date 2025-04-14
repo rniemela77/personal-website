@@ -34,6 +34,11 @@ a:focus {
   color: white;
 }
 
+.project-link {
+  display: inline-block;
+  margin: 10px 10px 10px 0;
+}
+
 ::selection {
   background: #06aa73;
   color: #fff;
