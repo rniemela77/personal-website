@@ -210,186 +210,201 @@
       <section id="projects">
         <h2>Projects</h2>
 
-        <div class="projects">
-          <div class="project">
-            <div class="project-info">
-              <h3>Chuzapath</h3>
-              <p>A choose-your-own-adventure game that uses AI to generate dynamic stories and options based on player choices.</p>
-              <p>Role: Developer</p>
-              <h4>Technologies: Vue.js (v3), Vite, Netlify Functions, OpenAI API</h4>
-              <ul>
-                <li>
-                  AI-powered branching storytelling experience
-                </li>
-                <li>
-                  Secure API integration via Netlify Functions
-                </li>
-                <li>
-                  Responsive Vue.js component architecture
-                </li>
-              </ul>
+        <div class="project-carousel-container">
+          <div class="project-tabs">
+            <button class="project-tab active" data-project="chuzapath">Chuzapath</button>
+            <button class="project-tab" data-project="island">Island Forest Explorer</button>
+            <button class="project-tab" data-project="darlingdinnersready">DarlingDinnersReady</button>
+            <button class="project-tab" data-project="pyportal">PyPortal Time Zone Display</button>
+            <button class="project-tab" data-project="innerdecision">Inner Decision Blog</button>
+          </div>
 
-              <a href="https://chuzapath.netlify.app/" target="_blank" class="project-link">
-                View site
-              </a>
+          <div class="projects carousel">
+            <div class="project active" id="chuzapath" style="display: flex;">
+              <div class="project-info">
+                <h3>Chuzapath</h3>
+                <p>A choose-your-own-adventure game that uses AI to generate dynamic stories and options based on player choices.</p>
+                <p>Role: Developer</p>
+                <h4>Technologies: Vue.js (v3), Vite, Netlify Functions, OpenAI API</h4>
+                <ul>
+                  <li>
+                    AI-powered branching storytelling experience
+                  </li>
+                  <li>
+                    Secure API integration via Netlify Functions
+                  </li>
+                  <li>
+                    Responsive Vue.js component architecture
+                  </li>
+                </ul>
+
+                <a href="https://chuzapath.netlify.app/" target="_blank" class="project-link">
+                  View site
+                </a>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/chuzapath.png" alt="Screenshot of the Chuzapath adventure game" />
+                  <div class="reflection">
+                    <img src="assets/images/chuzapath.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
             </div>
-            <div class="project-image">
-              <div class="image-with-reflection">
-                <img src="assets/images/chuzapath.png" alt="Screenshot of the Chuzapath adventure game" />
-                <div class="reflection">
-                  <img src="assets/images/chuzapath.png" alt="" aria-hidden="true" />
+
+            <div class="project" id="island" style="display: none;">
+              <div class="project-info">
+                <h3>Island Forest Explorer</h3>
+                <p>A 3D interactive forest where you can walk around and explore the environment.</p>
+                <p>Role: Developer</p>
+                <h4>Technologies: Three.js, JavaScript, WebGL, GitHub Pages</h4>
+                <ul>
+                  <li>
+                    Created an immersive 3D forest environment using Three.js
+                  </li>
+
+                  <li>
+                    Implemented first-person navigation controls for exploring the virtual island
+                  </li>
+
+                  <li>
+                    Optimized 3D assets and performance for smooth browser-based experience
+                  </li>
+                </ul>
+
+                <a href="https://rniemela77.github.io/island/" target="_blank" class="project-link">
+                  View site
+                </a>
+
+                <a
+                  href="https://github.com/rniemela77/island"
+                  target="_blank"
+                  class="project-link"
+                >
+                  View code
+                </a>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/island.png" alt="Screenshot of the Island Forest Explorer project" />
+                  <div class="reflection">
+                    <img src="assets/images/island.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project" id="darlingdinnersready" style="display: none;">
+              <div class="project-info">
+                <h3>DarlingDinnersReady</h3>
+                <p>A blog for a family member's project.</p>
+                <p>Role: Developer</p>
+                <h4>Technologies: Vue.js, Gridsome, Sanity.io</h4>
+                <ul>
+                  <li>Uses the Vue.js framework to build the site's front-end.</li>
+
+                  <li>
+                    Uses the Gridsome framework to improve page speed and SEO, by
+                    serving the user pre-generated HTML files which turn into a
+                    hydrating Vue.js app.
+                  </li>
+
+                  <li>
+                    Fetches and renders data from the content manager Sanity.io to
+                    allow the blog's author to edit and publish their posts.
+                  </li>
+                </ul>
+
+                <a href="https://darlingdinnersready.com" target="_blank" class="project-link">
+                  View site
+                </a>
+
+                <a
+                  href="https://github.com/rniemela77/darlingdinnersready.com"
+                  target="_blank"
+                  class="project-link"
+                >
+                  View code
+                </a>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/darlingdinnersready.png" alt="Screenshot of the DarlingDinnersReady blog" />
+                  <div class="reflection">
+                    <img src="assets/images/darlingdinnersready.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project" id="pyportal" style="display: none;">
+              <div class="project-info">
+                <h3>PyPortal Time Zone Display</h3>
+                <p>A custom application for PyPortal device that displays time from different time zones.</p>
+                <p>Role: Developer</p>
+                <h4>Technologies: Python, API Integration, PyPortal</h4>
+                <ul>
+                  <li>
+                    Fetches time data for two time zones via API calls
+                  </li>
+
+                  <li>
+                    Displays dual time zones on a single screen with ASCII animations
+                  </li>
+
+                  <li>
+                    Features touch input and adaptive display based on time of day
+                  </li>
+                </ul>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/pyportal.png" alt="Photo of the PyPortal Time Zone Display device" />
+                  <div class="reflection">
+                    <img src="assets/images/pyportal.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project" id="innerdecision" style="display: none;">
+              <div class="project-info">
+                <h3>Inner Decision Blog</h3>
+                <p>A personal blog focused on learning, philosophy, and self-improvement.</p>
+                <p>Role: Developer & Author</p>
+                <h4>Technologies: Vuepress, JavaScript, Markdown</h4>
+                <ul>
+                  <li>
+                    Built with Vuepress for fast, SEO-friendly static site generation
+                  </li>
+
+                  <li>
+                    Features a clean, responsive design optimized for readability
+                  </li>
+
+                  <li>
+                    Content written in Markdown for easy maintenance and publishing
+                  </li>
+                </ul>
+
+                <a href="https://www.innerdecision.com" target="_blank" class="project-link">
+                  View site
+                </a>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/innerdecision.png" alt="Screenshot of the Inner Decision blog" />
+                  <div class="reflection">
+                    <img src="assets/images/innerdecision.png" alt="" aria-hidden="true" />
+                  </div>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="project">
-            <div class="project-info">
-              <h3>Island Forest Explorer</h3>
-              <p>A 3D interactive forest where you can walk around and explore the environment.</p>
-              <p>Role: Developer</p>
-              <h4>Technologies: Three.js, JavaScript, WebGL, GitHub Pages</h4>
-              <ul>
-                <li>
-                  Created an immersive 3D forest environment using Three.js
-                </li>
-
-                <li>
-                  Implemented first-person navigation controls for exploring the virtual island
-                </li>
-
-                <li>
-                  Optimized 3D assets and performance for smooth browser-based experience
-                </li>
-              </ul>
-
-              <a href="https://rniemela77.github.io/island/" target="_blank" class="project-link">
-                View site
-              </a>
-
-              <a
-                href="https://github.com/rniemela77/island"
-                target="_blank"
-                class="project-link"
-              >
-                View code
-              </a>
-            </div>
-            <div class="project-image">
-              <div class="image-with-reflection">
-                <img src="assets/images/island.png" alt="Screenshot of the Island Forest Explorer project" />
-                <div class="reflection">
-                  <img src="assets/images/island.png" alt="" aria-hidden="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project">
-            <div class="project-info">
-              <h3>DarlingDinnersReady</h3>
-              <p>A blog for a family member's project.</p>
-              <p>Role: Developer</p>
-              <h4>Technologies: Vue.js, Gridsome, Sanity.io</h4>
-              <ul>
-                <li>Uses the Vue.js framework to build the site's front-end.</li>
-
-                <li>
-                  Uses the Gridsome framework to improve page speed and SEO, by
-                  serving the user pre-generated HTML files which turn into a
-                  hydrating Vue.js app.
-                </li>
-
-                <li>
-                  Fetches and renders data from the content manager Sanity.io to
-                  allow the blog's author to edit and publish their posts.
-                </li>
-              </ul>
-
-              <a href="https://darlingdinnersready.com" target="_blank" class="project-link">
-                View site
-              </a>
-
-              <a
-                href="https://github.com/rniemela77/darlingdinnersready.com"
-                target="_blank"
-                class="project-link"
-              >
-                View code
-              </a>
-            </div>
-            <div class="project-image">
-              <div class="image-with-reflection">
-                <img src="assets/images/darlingdinnersready.png" alt="Screenshot of the DarlingDinnersReady blog" />
-                <div class="reflection">
-                  <img src="assets/images/darlingdinnersready.png" alt="" aria-hidden="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project">
-            <div class="project-info">
-              <h3>PyPortal Time Zone Display</h3>
-              <p>A custom application for PyPortal device that displays time from different time zones.</p>
-              <p>Role: Developer</p>
-              <h4>Technologies: Python, API Integration, PyPortal</h4>
-              <ul>
-                <li>
-                  Fetches time data for two time zones via API calls
-                </li>
-
-                <li>
-                  Displays dual time zones on a single screen with ASCII animations
-                </li>
-
-                <li>
-                  Features touch input and adaptive display based on time of day
-                </li>
-              </ul>
-            </div>
-            <div class="project-image">
-              <div class="image-with-reflection">
-                <img src="assets/images/pyportal.png" alt="Photo of the PyPortal Time Zone Display device" />
-                <div class="reflection">
-                  <img src="assets/images/pyportal.png" alt="" aria-hidden="true" />
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="project">
-            <div class="project-info">
-              <h3>Inner Decision Blog</h3>
-              <p>A personal blog focused on learning, philosophy, and self-improvement.</p>
-              <p>Role: Developer & Author</p>
-              <h4>Technologies: Vuepress, JavaScript, Markdown</h4>
-              <ul>
-                <li>
-                  Built with Vuepress for fast, SEO-friendly static site generation
-                </li>
-
-                <li>
-                  Features a clean, responsive design optimized for readability
-                </li>
-
-                <li>
-                  Content written in Markdown for easy maintenance and publishing
-                </li>
-              </ul>
-
-              <a href="https://www.innerdecision.com" target="_blank" class="project-link">
-                View site
-              </a>
-            </div>
-            <div class="project-image">
-              <div class="image-with-reflection">
-                <img src="assets/images/innerdecision.png" alt="Screenshot of the Inner Decision blog" />
-                <div class="reflection">
-                  <img src="assets/images/innerdecision.png" alt="" aria-hidden="true" />
-                </div>
-              </div>
-            </div>
+          <div class="carousel-controls">
+            <button class="prev-btn">&lt; Previous</button>
+            <button class="next-btn">Next &gt;</button>
           </div>
         </div>
       </section>
