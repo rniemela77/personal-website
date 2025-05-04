@@ -200,7 +200,8 @@
 
         <div class="project-carousel-container">
           <div class="project-tabs">
-            <button class="project-tab active" data-project="chuzapath">Chuzapath - AI Adventure</button>
+            <button class="project-tab active" data-project="somni">Somni - AI Personality Analysis</button>
+            <button class="project-tab" data-project="chuzapath">Chuzapath - AI Adventure</button>
             <button class="project-tab" data-project="island">Island Forest Explorer</button>
             <button class="project-tab" data-project="darlingdinnersready">DarlingDinnersReady</button>
             <button class="project-tab" data-project="pyportal">PyPortal ASCII Display</button>
@@ -208,7 +209,42 @@
           </div>
 
           <div class="projects carousel">
-            <div class="project active" id="chuzapath" style="display: flex;">
+            <div class="project active" id="somni" style="display: flex;">
+              <div class="project-info">
+                <h3>Somni - AI-Powered Personality Analysis App</h3>
+                <p>A sophisticated personality assessment application that offers users insightful self-discovery through thoughtfully designed quizzes and detailed personality analysis.</p>
+                <h4>Technologies: Vue.js 3, Vite, Pinia, Firebase, Stripe, Netlify</h4>
+                <ul>
+                  <li>
+                    Implemented secure user authentication and data storage with Firebase
+                  </li>
+                  <li>
+                    Integrated Stripe payment processing for premium personality insights
+                  </li>
+                  <li>
+                    Built scalable serverless architecture with Netlify Functions
+                  </li>
+                </ul>
+
+                <a href="https://somni.netlify.app/" target="_blank" class="project-link">
+                  View site
+                </a>
+                
+                <a href="https://github.com/rniemela77/somni" target="_blank" class="project-link">
+                  View code
+                </a>
+              </div>
+              <div class="project-image">
+                <div class="image-with-reflection">
+                  <img src="assets/images/somni.png" alt="Screenshot of the Somni personality quiz application" />
+                  <div class="reflection">
+                    <img src="assets/images/somni.png" alt="" aria-hidden="true" />
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="project" id="chuzapath" style="display: none;">
               <div class="project-info">
                 <h3>Chuzapath</h3>
                 <p>A choose-your-own-adventure game that uses AI to generate dynamic stories and options based on player choices.</p>
