@@ -76,6 +76,22 @@ const projects = [
     image: 'somni.png'
   },
   {
+    id: 'chuzapath',
+    title: 'Chuzapath',
+    tags: ['AI', 'Vue.js'],
+    description: 'A choose-your-own-adventure game that uses AI to generate dynamic stories and options based on player choices.',
+    technologies: 'Vue.js (v3), Vite, Netlify Functions, OpenAI API',
+    features: [
+      'AI-powered branching storytelling experience',
+      'Secure API integration via Netlify Functions',
+      'Responsive Vue.js component architecture'
+    ],
+    links: {
+      site: 'https://chuzapath.netlify.app/'
+    },
+    image: 'chuzapath.png'
+  },
+  {
     id: 'systemtheme',
     title: 'System Theme - Modern File Editor',
     tags: ['React', 'TypeScript'],
@@ -94,20 +110,20 @@ const projects = [
     image: 'system-theme.png'
   },
   {
-    id: 'chuzapath',
-    title: 'Chuzapath',
-    tags: ['AI', 'Vue.js'],
-    description: 'A choose-your-own-adventure game that uses AI to generate dynamic stories and options based on player choices.',
-    technologies: 'Vue.js (v3), Vite, Netlify Functions, OpenAI API',
+    id: 'hemisphere',
+    title: 'Hemisphere Hunter - Dual-Control Mobile Brain Training Game',
+    tags: ['JavaScript','Phaser.js'],
+    description: 'A touchscreen game that trains bilateral coordination and cognitive synchronization by having players simultaneously control two circles to catch moving targets, promoting improved left- and right-brain communication.',
+    technologies: 'Phaser 3, JavaScript',
     features: [
-      'AI-powered branching storytelling experience',
-      'Secure API integration via Netlify Functions',
-      'Responsive Vue.js component architecture'
+      'Built with Phaser.js, a JavaScript game-development framework',
+      'Optimized for mobile devices, with a focus on low CPU/battery usage'
     ],
     links: {
-      site: 'https://chuzapath.netlify.app/'
+      site: 'https://rniemela77.github.io/left-right-brain-game/',
+      code: 'https://github.com/rniemela77/left-right-brain-game'
     },
-    image: 'chuzapath.png'
+    image: 'hemispherehunter.png'
   },
   {
     id: 'island',
