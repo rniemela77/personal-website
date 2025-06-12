@@ -54,7 +54,11 @@ img:not([src^="assets/"]) {
   border: 7px solid #e0e0e0;
 }
 
-section:not(:first-of-type) {
+section:first-of-type {
+  margin-top: clamp(3rem, 14vw, 20vh);
+}
+
+section {
   margin-bottom: 5rem;
 }
 
@@ -62,7 +66,6 @@ section:not(:first-of-type) {
 .bio {
   display: flex;
   justify-content: center;
-  min-height: 95vh;
   align-items: center;
   position: relative;
 }
@@ -85,14 +88,14 @@ section:not(:first-of-type) {
   opacity: 0.3;
 }
 .bio .links {
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 1rem;
 }
 .bio .links > div {
   display: flex;
   align-items: center;
+  gap: 0.5rem;
 }
 .bio .links .svg-container {
   width: 30px;
@@ -100,15 +103,6 @@ section:not(:first-of-type) {
   align-items: center;
   display: inline-flex;
   justify-content: flex-start;
-}
-.down-indicator {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  border: none;
-  background: none;
-  cursor: pointer;
 }
 
 .experience,
@@ -528,4 +522,40 @@ footer {
 
 .download-resume:hover img {
   transform: translateY(1px);
+}
+
+.links {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin: 0 auto;
+}
+
+.contact-link {
+  width: fit-content;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  text-decoration: none;
+  color: #333;
+}
+
+.contact-link:hover {
+  background: #f0f0f0;
+  transform: translateY(-1px);
+  text-decoration:underline;
+  text-decoration-color: #000;
+}
+
+.contact-link img {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.contact-link span {
+  font-size: 0.95rem;
 }
