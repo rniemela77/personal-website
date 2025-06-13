@@ -104,8 +104,9 @@ section {
 /* Links grid */
 .links {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: var(--spacing-md);
+  margin: 0 auto;
 }
 
 .links > div {
@@ -462,6 +463,12 @@ footer {
   .modal-close {
     top: -30px;
     right: 0;
+  }
+
+  .links {
+    grid-template-columns: 1fr;
+    max-width: 300px;
+    margin: 0 auto;
   }
 }
 
