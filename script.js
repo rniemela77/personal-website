@@ -198,14 +198,6 @@ document.addEventListener('alpine:init', () => {
     modalOpen: false,
     modalImage: '',
 
-    next() {
-      this.currentIndex = (this.currentIndex + 1) % this.projects.length;
-    },
-
-    prev() {
-      this.currentIndex = (this.currentIndex - 1 + this.projects.length) % this.projects.length;
-    },
-
     openModal(event) {
       const modal = document.querySelector('.image-modal');
       const modalComponent = Alpine.$data(modal);

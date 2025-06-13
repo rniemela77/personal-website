@@ -152,21 +152,21 @@
       <section id="projects">
         <h2>Personal Work</h2>
 
-        <div class="project-carousel-container" x-data="projectCarousel">
-          <div class="project-tabs">
+        <div class="projects-container" x-data="projectCarousel">
+          <div class="projects-sidebar">
             <template x-for="(project, index) in projects" :key="project.id">
               <button 
-                class="project-tab" 
+                class="project-nav-item" 
                 :class="{ 'active': currentIndex === index }"
                 @click="currentIndex = index"
               >
-                <div class="project-tab-title" x-text="project.title.split(' - ')[0]"></div>
-                <div class="project-tab-tags" x-text="project.tags.join(' • ')"></div>
+                <div class="project-nav-title" x-text="project.title.split(' - ')[0]"></div>
+                <div class="project-nav-tags" x-text="project.tags.join(' • ')"></div>
               </button>
             </template>
           </div>
 
-          <div class="projects carousel">
+          <div class="projects-content">
             <template x-for="(project, index) in projects" :key="project.id">
               <div 
                 class="project" 
@@ -207,11 +207,6 @@
                 </div>
               </div>
             </template>
-          </div>
-
-          <div class="carousel-controls">
-            <button class="prev-btn" @click="prev">&lt; Previous</button>
-            <button class="next-btn" @click="next">Next &gt;</button>
           </div>
         </div>
       </section>
