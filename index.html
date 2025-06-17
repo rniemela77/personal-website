@@ -5,230 +5,212 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robert Niemela | Frontend Engineer</title>
     <link rel="stylesheet" href="styles.css" />
-    <link rel="icon" href="/favicon.ico" type="image/x-icon">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-      rel="stylesheet"
-    />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap"
-      rel="stylesheet"
-    />
-    
-    <!-- Add Alpine.js -->
-    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
   </head>
   <body>
-    <main class="container">
-      <section id="about" class="bio">
-        <div class="portrait-text">
-          <img
-            src="https://avatars.githubusercontent.com/u/84466763?s=400&u=fbf5162e12b7a53092ba010dd7a3fd6639f8dbc5&v=4"
-            alt="Photograph portrait of Robert Niemela"
-            width="150"
-            height="150"
-            style="border-radius: 50%; width: 150px; height: 150px"
-          />
+    <main>
+      <nav class="nav-container">
+        <p class="nav-title">Robert Niemela</p>
 
-          <div class="portrait-text__text">
-            <h1>Hi, I'm Robert Niemela</h1>
+        <ul class="nav-links">
+          <li><a href="#about">About</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="assets/Robert-Niemela-Resume.pdf" download>Resume</a></li>
+        </ul>
+      </nav> 
 
-            <p>
-              I'm a front-end developer with 4+ years of experience focused on building clean, responsive interfaces with Vue.js. I'm looking for a product-minded team where I can contribute to meaningful user experiences and grow alongside challenging projects.
-            </p>
+      <section class="bio">
+        <img
+          src="https://avatars.githubusercontent.com/u/84466763?s=400&u=fbf5162e12b7a53092ba010dd7a3fd6639f8dbc5&v=4"
+          alt="Photograph portrait of Robert Niemela"
+          width="150"
+          height="150"
+          class="bio-portrait"
+        />
 
-            <a href="assets/Robert-Niemela-Resume.pdf" download class="download-resume">
-              <img src="assets/download.svg" alt="Download icon" width="20" height="20" />
+        <div class="bio-content">
+          <h1 class="bio-title">Robert Niemela</h1>
+
+          <p>
+            I'm a frontend engineer specializing in Vue.js, with 4 years of
+            experience crafting clean, responsive web experiences.
+          </p>
+
+          <div class="download-resume-container">
+            <a
+              href="assets/Robert-Niemela-Resume.pdf"
+              download
+              class="btn btn-primary"
+            >
+              <img 
+                src="assets/download.svg"
+                alt="Download icon"
+                width="20"
+                height="20"
+              />
               Download Resume
             </a>
-          </div>
+
+            <a href="assets/Robert-Niemela-Resume.pdf" target="_blank" class="btn">
+              <img 
+                src="assets/open-new-tab.svg"
+                alt="View icon"
+                width="20"
+                height="20"
+              />
+              View Resume
+            </a>
+        </div>
         </div>
       </section>
 
-      <section id="contact-links">
-        <h2>Let's get in touch!</h2>
-        <div class="links">
-          <a href="mailto:rvniemela@hotmail.com" class="contact-link">
-            <img src="assets/email.svg" alt="Email icon" width="24" height="24" />
+      <section id="contact-skills">
+        <div class="contact">
+        <h2>Contact</h2>
+
+        <div class="contact-links-container">
+          <a href="mailto:rvniemela@hotmail.com" class="btn">
+            <img
+              src="assets/email.svg"
+              alt="Email icon"
+              width="24"
+              height="24"
+            />
             <span>rvniemela@hotmail.com</span>
           </a>
 
-          <a href="https://www.linkedin.com/in/robert-niemela/" target="_blank" class="contact-link">
-            <img src="assets/linkedin.svg" alt="LinkedIn logo" width="24" height="24" />
+          <a
+            href="https://www.linkedin.com/in/robert-niemela/"
+            target="_blank"
+            class="btn"
+          >
+            <img
+              src="assets/linkedin.svg"
+              alt="LinkedIn logo"
+              width="24"
+              height="24"
+            />
             <span>linkedin.com/in/robert-niemela</span>
           </a>
 
-          <a href="tel:4807731040" class="contact-link">
-            <img src="assets/phone.svg" alt="Phone icon" width="24" height="24" />
+          <a href="tel:4807731040" class="btn">
+            <img
+              src="assets/phone.svg"
+              alt="Phone icon"
+              width="24"
+              height="24"
+            />
             <span>(480) 773-1040</span>
           </a>
 
-          <a href="https://github.com/rniemela77" target="_blank" class="contact-link">
-            <img src="assets/github.svg" alt="GitHub logo" width="24" height="24" />
-            <span>github.com/rniemela77</span>
-          </a>
+            <a
+              href="https://github.com/rniemela77"
+              target="_blank"
+              class="btn"
+            >
+              <img
+                src="assets/github.svg"
+                alt="GitHub logo"
+                width="24"
+                height="24"
+              />
+              <span>github.com/rniemela77</span>
+            </a>
+          </div>
         </div>
+      </div>
+
+      <div class="skills">
+        <h2>Skills</h2>
+
+        <h3>Languages</h3>
+        <ul class="skills-list">
+          <li><img src="assets/html.svg" alt="HTML5" width="24" height="24"> HTML5</li>
+          <li><img src="assets/css.svg" alt="CSS3" width="24" height="24"> CSS3</li>
+          <li><img src="assets/sass.svg" alt="Sass" width="24" height="24"> Sass</li>
+          <li><img src="assets/javascript.svg" alt="JavaScript" width="24" height="24"> JavaScript</li>
+          <li><img src="assets/typescript.svg" alt="TypeScript" width="24" height="24"> TypeScript</li>
+        </ul>
+
+        <h3>Frameworks/Libraries</h3>
+        <ul class="skills-list">
+          <li><img src="assets/bootstrap.svg" alt="Bootstrap" width="24" height="24"> Bootstrap</li>
+          <li><img src="assets/vue.svg" alt="Vue.js" width="24" height="24"> Vue.js</li>
+          <li><img src="assets/nuxt.svg" alt="Nuxt.js" width="24" height="24"> Nuxt.js</li>
+          <li><img src="assets/laravel.svg" alt="Laravel" width="24" height="24"> Laravel</li>
+        </ul>
+
+        <h3>Testing/Tools</h3>  
+        <ul class="skills-list">
+          <li><img src="assets/jest.svg" alt="Jest" width="24" height="24"> Jest</li>
+          <li><img src="assets/cypress.svg" alt="Cypress" width="24" height="24"> Cypress</li>
+          <li><img src="assets/api.svg" alt="RESTful APIs" width="24" height="24"> RESTful APIs</li>
+          <li><img src="assets/git.svg" alt="Git" width="24" height="24"> Git</li>
+        </ul>
+      </div>
       </section>
 
-      <section id="education">
-        <h2>Education</h2>
-        <p>2020 - AAS in Web Design from Mesa Community College</p>
-      </section>
+      <section id="education-certifications">
+        <div class="education">
+          <h2>Education</h2>
+          <p>2020<br><b>A.A.S. in Web Design</b> <br> from Mesa Community College</p>
+        </div>
 
-      <section id="certifications">
-        <h2>Certifications</h2>
-        <p>April 2024 - Foundational Leadership Academy Certificate of Excellence</p>
+        <div class="certifications">
+          <h2>Certifications</h2> 
+          <p>April 2024<br><b>Certificate of Excellence</b> <br> from Foundational Leadership Academy</p>
+        </div>
       </section>
 
       <section id="experience">
         <h2>Professional Experience</h2>
 
-        <div class="experience">
+        <div class="experience">          
+          <h3 class="experience-company">Software Engineer I - Goodwill of Central and Northern Arizona</h3>
+
           <span class="experience-date">June 2022 - April 2025</span>
 
-          <h3>
-            Goodwill of Central and Northern Arizona
-          </h3>
-
-          <h4 class="experience-title">Software Engineer I</h4>
-
-          <p class="experience-promoted">Promoted from Junior Developer in 1 year.</p>
-
-          <h4>Technologies:</h4>
-          <p>Vue.js, Laravel, Cypress, SQL.</p>
+          <i class="experience-promoted">
+            Promoted from Junior Developer in 1 year.
+          </i>
 
           <h4>Key Contributions:</h4>
           <ul>
-            <li>Developed and maintained dynamic, responsive web applications using Vue.js, and modern frontend practices</li>
-            <li>Led integration of Vuelidate for form validation and Pinia for state management, improving user experience and scalability</li>
-            <li>Streamlined Webpack configuration to enable dynamic imports for large packages, reducing initial load times; pruned SCSS codebase by ~80%, significantly decreasing CSS bundle size</li>
-            <li>Implemented Cypress testing and BrowserSync to enhance development workflow and CI/CD reliability</li>
-            <li>Transitioned frontend architecture for greater modularity, supporting a smoother SPA-like user experience</li>
+            <li>Built responsive web apps with Vue.js and modern frontend practices</li>
+            <li>Integrated Vuelidate and Pinia for robust forms and scalable state</li>
+            <li>Optimized Webpack with dynamic imports; cut SCSS bundle size by ~80%</li>
+            <li>Added Cypress tests and BrowserSync for smoother CI/CD</li>
+            <li>Refactored frontend for modular SPA-like architecture</li>
+            <li>Maintained production frontend for a high-traffic retail nonprofit site</li>
           </ul>
         </div>
 
         <div class="experience">
+          <h3 class="experience-company">Developer - Chapman Automotive Group</h3>
           <span class="experience-date">May 2021 - April 2022</span>
-
-          <h3>Chapman Automotive Group</h3>
-
-          <h4 class="experience-title">Developer</h4>
-
-          <h4>Technologies:</h4>
-          <p>Nuxt.js, Vue.js, Sass, Jest, REST APIs</p>
 
           <h4>Key Contributions:</h4>
           <ul>
-            <li>Reinforced codebase durability with unit testing (Jest) and TypeScript</li>
-            <li>Developed new features and enhanced site functionality using modern front-end technology</li>
-            <li>Enhanced mobile user experience and user satisfaction with responsive design based styling</li>
-            <li>Strengthened SEO ranking and accessibility options with improved HTML markup</li>
+            <li>Improved code reliability with Jest unit tests and TypeScript</li>
+            <li>Built new features and upgraded site functionality with modern frontend tech</li>
+            <li>Enhanced mobile UX with responsive styling</li>
+            <li>Boosted SEO and accessibility through better HTML markup</li>
+            <li>Developed and maintained online car dealership platform for browsing inventory and purchasing vehicles</li>
           </ul>
         </div>
-      </section>
-
-      <section id="skills">
-        <h2>Skills & Tools</h2>
-        <ul>
-          <li><b>Languages:</b> JavaScript, PHP</li>
-          <li><b>Frameworks/Libraries:</b> Vue.js, Nuxt.js, Laravel</li>
-          <li><b>Front-End:</b> HTML5, CSS3, Responsive Design</li>
-          <li><b>Back-End:</b> RESTful APIs, MySQL</li>
-          <li><b>Tools:</b> Git, Adobe Photoshop, Adobe XD</li>
-          <li><b>Practices:</b> Agile</li>
-          <li>
-            <b>Soft Skills:</b> Problem-Solving, Communication, Collaboration,
-            Adaptability
-          </li>
-        </ul>
       </section>
 
       <section id="projects">
         <h2>Personal Work</h2>
+        
+        <div id="projects-list" class="collapsed"></div>
 
-        <div class="projects-container" x-data="projectCarousel">
-          <div class="projects-sidebar">
-            <template x-for="(project, index) in projects" :key="project.id">
-              <button 
-                class="project-nav-item" 
-                :class="{ 'active': currentIndex === index }"
-                @click="currentIndex = index"
-              >
-                <div class="project-nav-title" x-text="project.title.split(' - ')[0]"></div>
-                <div class="project-nav-tags" x-text="project.tags.join(' • ')"></div>
-              </button>
-            </template>
-          </div>
-
-          <div class="projects-content">
-            <template x-for="(project, index) in projects" :key="project.id">
-              <div 
-                class="project" 
-                :class="{ 'active': currentIndex === index }"
-                :style="{ display: currentIndex === index ? 'flex' : 'none' }"
-              >
-                <div class="project-info">
-                  <h3 x-text="project.title"></h3>
-                  <p x-text="project.description"></p>
-                  <h4 x-text="'Technologies: ' + project.technologies"></h4>
-                  <ul>
-                    <template x-for="feature in project.features" :key="feature">
-                      <li x-text="feature"></li>
-                    </template>
-                  </ul>
-                  <template x-if="project.links">
-                    <div>
-                      <template x-if="project.links.site">
-                        <a :href="project.links.site" target="_blank" class="project-link">
-                          View site
-                        </a>
-                      </template>
-                      <template x-if="project.links.code">
-                        <a :href="project.links.code" target="_blank" class="project-link">
-                          View code
-                        </a>
-                      </template>
-                    </div>
-                  </template>
-                </div>
-                <div class="project-image">
-                  <div class="image-with-reflection">
-                    <img :src="'assets/images/' + project.image" :alt="'Screenshot of ' + project.title" @click="openModal($event)" />
-                    <div class="reflection">
-                      <img :src="'assets/images/' + project.image" alt="" aria-hidden="true" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </template>
-          </div>
-        </div>
+        <button class="btn" id="view-more-button">See more projects</button>
       </section>
 
-      <!-- Image Modal -->
-      <div class="image-modal" 
-           x-data="{ isOpen: false, imageSrc: '' }" 
-           x-show="isOpen" 
-           @click="isOpen = false"
-           style="display: none;"
-      >
-        <div class="modal-content">
-          <img class="modal-image" :src="imageSrc" />
-          <span class="modal-close" @click="isOpen = false">&times;</span>
-        </div>
-      </div>
-
       <section id="contact">
-        <h2>Contact</h2>
-        <p>
-          <i>Please reach out with any questions or opportunities.</i>
-        </p>
+        <h2>Contact Me</h2>
 
         <form
           class="contact-form"
@@ -246,7 +228,7 @@
           <textarea id="message" name="message" rows="5" required></textarea
           ><br /><br />
 
-          <button type="submit">Send</button>
+          <button class="btn btn-primary" type="submit">Send</button>
         </form>
       </section>
     </main>
@@ -262,9 +244,6 @@
       </p>
     </footer>
 
-    <script>
-      // Remove all down-indicator related code
-    </script>
     <script src="script.js"></script>
   </body>
 </html>
