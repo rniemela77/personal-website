@@ -180,3 +180,6 @@ viewMoreButton.addEventListener("click", () => {
     viewMoreButton.textContent = "See less projects";
   }
 });
+
+// Update copyright year in footer
+document.getElementById('current-year').textContent = new Date().getFullYear();
