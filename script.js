@@ -6,7 +6,7 @@ const projects = [
     tags: ["AI", "Vue.js", "Serverless Backend"],
     description:
       "A sophisticated personality assessment application that offers users insightful self-discovery through thoughtfully designed quizzes and detailed personality analysis.",
-    technologies: "Vue.js 3, Vite, Pinia, Firebase, Stripe, Netlify",
+    technologies: "Vue.js 3, Vite, Pinia, Firebase, Stripe, Netlify, TypeScript",
     features: [
       "Implemented secure user authentication and data storage with Firebase",
       "Integrated Stripe payment processing for premium personality insights",
