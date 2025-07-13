@@ -17,11 +17,20 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 body {
-  background: #f0f0f0;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+}
+
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #fafafa, #e8e8e8);
+  z-index: -1;
 }
 
 main {
@@ -278,7 +287,6 @@ footer {
   gap: 1rem;
   margin-top: 2rem;
   padding: 1rem;
-  background: #f0f0f0;
 }
 
 /* Buttons */
