@@ -90,9 +90,9 @@
 .theme-hint-content {
   background: var(--primary-color);
   color: white;
-  padding: 6px 10px;
-  border-radius: 16px;
-  font-size: 12px;
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 10px;
   font-weight: 500;
   white-space: nowrap;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
@@ -102,13 +102,13 @@
 .theme-hint-content::after {
   content: '';
   position: absolute;
-  bottom: -6px;
-  right: 18px;
+  bottom: -5px;
+  right: 15px;
   width: 0;
   height: 0;
-  border-left: 6px solid transparent;
-  border-right: 6px solid transparent;
-  border-top: 6px solid var(--primary-color);
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  border-top: 5px solid var(--primary-color);
 }
 
 @keyframes hint-appear {
@@ -131,14 +131,7 @@
 }
 
 /* Mobile responsiveness for hint */
-@media (max-width: 768px) {
-  .theme-hint {
-    bottom: 85px;
-    right: 20px;
-    left: 20px;
-    text-align: center;
-  }
-  
+@media (max-width: 768px) {  
   .theme-hint-content::after {
     left: 50%;
     right: auto;
@@ -174,6 +167,7 @@
   transform: translateY(0);
   transition: all 0.3s ease;
   border: 1px solid #e0e0e0;
+  overflow: hidden;
 }
 
 .theme-panel.hidden {
@@ -186,7 +180,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 16px 20px;
+  padding-left: 16px;
   border-bottom: 1px solid #e0e0e0;
 }
 
@@ -200,16 +194,15 @@
 .close-btn {
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 28px;
   cursor: pointer;
   color: #666;
   padding: 0;
-  width: 24px;
-  height: 24px;
+  width: 64px;
+  height: 64px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 4px;
   transition: background 0.2s ease;
 }
 
@@ -277,18 +270,3 @@
   background: var(--primary-color);
   color: white;
 }
-
-/* Mobile responsiveness for theme panel */
-@media (max-width: 768px) {
-  .theme-panel {
-    width: calc(100vw - 40px);
-    right: 20px;
-    left: 20px;
-    bottom: 80px;
-  }
-  
-  .theme-toggle-btn {
-    bottom: 20px;
-    right: 20px;
-  }
-} 
