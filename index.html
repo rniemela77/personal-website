@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robert Niemela | Frontend Engineer</title>
     <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="theme-toggle.css" />
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- Fonts -->
@@ -260,5 +261,44 @@
     </footer>
 
     <script src="script.js"></script>
+    
+    <!-- Theme Toggle Button -->
+    <button id="theme-toggle" class="theme-toggle-btn" aria-label="Try retro effects" title="✨ Try the retro effects!">
+      <div class="theme-toggle-content">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M12 2L13.09 8.26L22 9L13.09 9.74L12 16L10.91 9.74L2 9L10.91 8.26L12 2Z" fill="currentColor"/>
+          <path d="M19 13L19.68 16.37L23 17L19.68 17.63L19 21L18.32 17.63L15 17L18.32 16.37L19 13Z" fill="currentColor"/>
+          <path d="M5 6L5.68 9.37L9 10L5.68 10.63L5 14L4.32 10.63L1 10L4.32 9.37L5 6Z" fill="currentColor"/>
+        </svg>
+        <span class="theme-toggle-text">Change Theme</span>
+      </div>
+    </button>
+
+    <!-- Theme Hint -->
+    <div id="theme-hint" class="theme-hint">
+      <div class="theme-hint-content">
+        Click to change the theme! ✨
+      </div>
+    </div>
+
+    <!-- Theme Panel -->
+    <div id="theme-panel" class="theme-panel hidden">
+      <div class="theme-panel-header">
+        <h3>Change Theme</h3>
+        <button id="close-theme-panel" class="close-btn" aria-label="Close theme panel">×</button>
+      </div>
+      <div class="theme-panel-content">
+        <div class="theme-option">
+          <button id="lcd-toggle" class="theme-option-btn">
+            <span class="theme-option-icon">📺</span>
+            <span class="theme-option-label">LCD Display</span>
+            <span id="lcd-status" class="theme-option-status">OFF</span>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Theme Panel Backdrop -->
+    <div id="theme-backdrop" class="theme-backdrop hidden"></div>
   </body>
 </html>

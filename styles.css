@@ -362,4 +362,7 @@ a.btn:not([download]):hover {
   font-family: 'VT323', monospace!important;
   text-transform: uppercase;
 }
+& footer * {
+  color: #fff !important;
+}
 }

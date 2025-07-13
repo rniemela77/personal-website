@@ -183,3 +183,117 @@ viewMoreButton.addEventListener("click", () => {
 
 // Update copyright year in footer
 document.getElementById('current-year').textContent = new Date().getFullYear();
+
+// Theme Toggle Functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const themeToggleBtn = document.getElementById('theme-toggle');
+  const themePanel = document.getElementById('theme-panel');
+  const themeBackdrop = document.getElementById('theme-backdrop');
+  const closePanelBtn = document.getElementById('close-theme-panel');
+  const lcdToggleBtn = document.getElementById('lcd-toggle');
+  const lcdStatus = document.getElementById('lcd-status');
+  const themeHint = document.getElementById('theme-hint');
+
+  // Check localStorage for saved theme preference
+  let isLcdActive = localStorage.getItem('lcd-effect') === 'true';
+  
+  // Check if hint has been shown before
+  const hasSeenHint = localStorage.getItem('theme-hint-seen') === 'true';
+  
+  // Hide hint if user has seen it before
+  if (hasSeenHint && themeHint) {
+    themeHint.style.display = 'none';
+  }
+
+  // Apply saved theme on page load
+  if (isLcdActive && lcdStatus) {
+    document.body.classList.add('lcd-effect');
+    lcdStatus.textContent = 'ON';
+    lcdStatus.classList.add('active');
+  }
+
+  // Hide hint function
+  function hideHint() {
+    if (themeHint) {
+      themeHint.style.opacity = '0';
+      setTimeout(() => {
+        themeHint.style.display = 'none';
+      }, 300);
+      localStorage.setItem('theme-hint-seen', 'true');
+    }
+  }
+
+  // Toggle theme panel visibility
+  function toggleThemePanel() {
+    if (!themePanel || !themeBackdrop) return;
+    
+    // Hide hint when button is clicked
+    hideHint();
+    
+    const isHidden = themePanel.classList.contains('hidden');
+    
+    if (isHidden) {
+      themePanel.classList.remove('hidden');
+      themeBackdrop.classList.remove('hidden');
+    } else {
+      themePanel.classList.add('hidden');
+      themeBackdrop.classList.add('hidden');
+    }
+  }
+
+  // Close theme panel
+  function closeThemePanel() {
+    if (!themePanel || !themeBackdrop) return;
+    
+    themePanel.classList.add('hidden');
+    themeBackdrop.classList.add('hidden');
+  }
+
+  // Toggle LCD effect
+  function toggleLcdEffect() {
+    if (!lcdStatus) return;
+    
+    isLcdActive = !isLcdActive;
+    
+    if (isLcdActive) {
+      document.body.classList.add('lcd-effect');
+      lcdStatus.textContent = 'ON';
+      lcdStatus.classList.add('active');
+    } else {
+      document.body.classList.remove('lcd-effect');
+      lcdStatus.textContent = 'OFF';
+      lcdStatus.classList.remove('active');
+    }
+    
+    // Save preference to localStorage
+    localStorage.setItem('lcd-effect', isLcdActive);
+  }
+
+  // Event listeners
+  if (themeToggleBtn) {
+    themeToggleBtn.addEventListener('click', toggleThemePanel);
+  }
+  if (closePanelBtn) {
+    closePanelBtn.addEventListener('click', closeThemePanel);
+  }
+  if (themeBackdrop) {
+    themeBackdrop.addEventListener('click', closeThemePanel);
+  }
+  if (lcdToggleBtn) {
+    lcdToggleBtn.addEventListener('click', toggleLcdEffect);
+  }
+
+  // Close panel when clicking outside (escape key)
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && themePanel && !themePanel.classList.contains('hidden')) {
+      closeThemePanel();
+    }
+  });
+
+  // Prevent panel from closing when clicking inside it
+  if (themePanel) {
+    themePanel.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  }
+});
