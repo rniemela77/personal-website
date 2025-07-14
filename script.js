@@ -192,10 +192,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const closePanelBtn = document.getElementById('close-theme-panel');
   const lcdToggleBtn = document.getElementById('lcd-toggle');
   const lcdStatus = document.getElementById('lcd-status');
+  const darkModeToggleBtn = document.getElementById('dark-mode-toggle');
+  const darkModeStatus = document.getElementById('dark-mode-status');
   const themeHint = document.getElementById('theme-hint');
 
-  // Check localStorage for saved theme preference
+  // Check localStorage for saved theme preferences
   let isLcdActive = localStorage.getItem('lcd-effect') === 'true';
+  let isDarkModeActive = localStorage.getItem('dark-mode') === 'true';
   
   // Check if hint has been shown before
   const hasSeenHint = localStorage.getItem('theme-hint-seen') === 'true';
@@ -205,11 +208,17 @@ document.addEventListener('DOMContentLoaded', function() {
     themeHint.style.display = 'none';
   }
 
-  // Apply saved theme on page load
+  // Apply saved themes on page load
   if (isLcdActive && lcdStatus) {
     document.body.classList.add('lcd-effect');
     lcdStatus.textContent = 'ON';
     lcdStatus.classList.add('active');
+  }
+  
+  if (isDarkModeActive && darkModeStatus) {
+    document.body.classList.add('dark-mode');
+    darkModeStatus.textContent = 'ON';
+    darkModeStatus.classList.add('active');
   }
 
   // Hide hint function
@@ -269,6 +278,26 @@ document.addEventListener('DOMContentLoaded', function() {
     localStorage.setItem('lcd-effect', isLcdActive);
   }
 
+  // Toggle Dark Mode
+  function toggleDarkMode() {
+    if (!darkModeStatus) return;
+    
+    isDarkModeActive = !isDarkModeActive;
+    
+    if (isDarkModeActive) {
+      document.body.classList.add('dark-mode');
+      darkModeStatus.textContent = 'ON';
+      darkModeStatus.classList.add('active');
+    } else {
+      document.body.classList.remove('dark-mode');
+      darkModeStatus.textContent = 'OFF';
+      darkModeStatus.classList.remove('active');
+    }
+    
+    // Save preference to localStorage
+    localStorage.setItem('dark-mode', isDarkModeActive);
+  }
+
   // Event listeners
   if (themeToggleBtn) {
     themeToggleBtn.addEventListener('click', toggleThemePanel);
@@ -281,6 +310,9 @@ document.addEventListener('DOMContentLoaded', function() {
   }
   if (lcdToggleBtn) {
     lcdToggleBtn.addEventListener('click', toggleLcdEffect);
+  }
+  if (darkModeToggleBtn) {
+    darkModeToggleBtn.addEventListener('click', toggleDarkMode);
   }
 
   // Close panel when clicking outside (escape key)
