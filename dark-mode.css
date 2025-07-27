@@ -85,11 +85,15 @@
   }
 
   /* specifically target black icons */
-  & img[src*="mail"], & img[src*="github"], & img[src*="linkedin"], & img[src*="phone"], & img[src*="cypress"], & img[src*="api"], & img[src*="git"] {
+  & img[src*="mail"], & img[src*="github"], & img[src*="linkedin"], & img[src*="phone"], & img[src*="cypress"], & img[src*="api"], & img[src*="git"], & img[src*="open-new-tab"] {
     filter: invert(1);
   }
 
   & .bio-portrait {
     filter: invert(0)!important;
+  }
+
+  & .experience-promoted {
+    color: #999;
   }
 } 
