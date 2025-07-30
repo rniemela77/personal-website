@@ -1,24 +1,6 @@
 // Project data
 const projects = [
   {
-    id: "somni",
-    title: "Somni - AI-Powered Personality Analysis App",
-    tags: ["AI", "Vue.js", "Serverless Backend"],
-    description:
-      "A sophisticated personality assessment application that offers users insightful self-discovery through thoughtfully designed quizzes and detailed personality analysis.",
-    technologies: "Vue.js 3, Vite, Pinia, Firebase, Stripe, Serverless Architecture, Netlify Functions, TypeScript, OpenAI API",
-    features: [
-      "Implemented secure user authentication and data storage with Firebase",
-      "Integrated Stripe payment processing for premium personality insights",
-      "Built scalable serverless architecture with Netlify Functions",
-    ],
-    links: {
-      site: "https://somni.netlify.app/",
-      code: "https://github.com/rniemela77/somni",
-    },
-    image: "somni.png",
-  },
-  {
     id: "chuzapath",
     title: "Chuzapath",
     tags: ["AI", "Vue.js"],
@@ -328,4 +310,98 @@ document.addEventListener('DOMContentLoaded', function() {
       e.stopPropagation();
     });
   }
+});
+
+// Featured Project Slide Navigation
+document.addEventListener('DOMContentLoaded', function() {
+  const slides = document.querySelectorAll('.slide');
+  const prevBtn = document.getElementById('prev-slide');
+  const nextBtn = document.getElementById('next-slide');
+  const slideIndicator = document.getElementById('slide-indicator');
+  
+  let currentSlideIndex = 0;
+  const totalSlides = slides.length;
+  
+  // Initialize the first slide as active
+  function initializeSlides() {
+    if (slides.length > 0) {
+      slides[0].classList.add('active');
+      updateSlideIndicator();
+      updateButtonStates();
+    }
+  }
+  
+  // Show a specific slide
+  function showSlide(index) {
+    // Hide all slides
+    slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Show the current slide
+    if (slides[index]) {
+      slides[index].classList.add('active');
+    }
+    
+    // Update slide indicator
+    updateSlideIndicator();
+    
+    // Update button states
+    updateButtonStates();
+  }
+  
+  // Update the slide indicator text
+  function updateSlideIndicator() {
+    if (slideIndicator) {
+      slideIndicator.textContent = `${currentSlideIndex + 1} / ${totalSlides}`;
+    }
+  }
+  
+  // Update button states (disable/enable based on current slide)
+  function updateButtonStates() {
+    if (prevBtn) {
+      prevBtn.disabled = currentSlideIndex === 0;
+      prevBtn.style.opacity = currentSlideIndex === 0 ? '0.5' : '1';
+    }
+    
+    if (nextBtn) {
+      nextBtn.disabled = currentSlideIndex === totalSlides - 1;
+      nextBtn.style.opacity = currentSlideIndex === totalSlides - 1 ? '0.5' : '1';
+    }
+  }
+  
+  // Go to previous slide
+  function goToPreviousSlide() {
+    if (currentSlideIndex > 0) {
+      currentSlideIndex--;
+      showSlide(currentSlideIndex);
+    }
+  }
+  
+  // Go to next slide
+  function goToNextSlide() {
+    if (currentSlideIndex < totalSlides - 1) {
+      currentSlideIndex++;
+      showSlide(currentSlideIndex);
+    }
+  }
+  
+  // Event listeners for navigation buttons
+  if (prevBtn) {
+    prevBtn.addEventListener('click', goToPreviousSlide);
+  }
+  
+  if (nextBtn) {
+    nextBtn.addEventListener('click', goToNextSlide);
+  }
+  
+  // Keyboard navigation
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'ArrowLeft') {
+      goToPreviousSlide();
+    } else if (e.key === 'ArrowRight') {
+      goToNextSlide();
+    }
+  });
+  
+  // Initialize slides on page load
+  initializeSlides();
 });

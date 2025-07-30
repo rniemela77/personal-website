@@ -3,97 +3,145 @@
   & .gradient-background {
     background: linear-gradient(to bottom, #1a1a1a, #0f0f0f);
   }
-  
+
   & main {
     background: #2a2a2a;
     color: #e0e0e0;
     box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.5);
   }
-  
+
   & .nav-links li a {
     color: #e0e0e0;
   }
-  
+
   & .nav-links li a:hover {
     color: #fff;
   }
-  
+
   & .bio-title {
     color: #fff;
   }
-  
+
   & .skills-list li {
     border: 1px solid #404040;
     background: #333;
     color: #e0e0e0;
   }
-  
+
   & .skills-list li:hover {
     background: #444;
     color: #fff;
   }
-  
+
   & .experience:not(:last-child) {
     border-bottom: 1px solid #404040;
   }
-  
+
   & .project:not(:last-of-type) {
     border-bottom: 1px solid #404040;
   }
-  
+
   & #contact {
     background: #333;
     color: #e0e0e0;
   }
-  
+
   & #contact input,
   & #contact textarea {
     background: #444;
     color: #e0e0e0;
     border: 1px solid #555;
   }
-  
+
   & #contact input:focus,
   & #contact textarea:focus {
     outline: 2px solid var(--primary-color);
     border-color: var(--primary-color);
   }
-  
+
   & .btn {
     background: #444;
     color: #e0e0e0;
     border: 1px solid #555;
   }
-  
+
   & .btn:hover {
     background: #555;
     color: #fff;
   }
-  
+
   & .btn-primary {
     background: var(--primary-color);
     color: var(--light-text);
   }
-  
+
   & .btn-primary:hover {
     background: var(--primary-btn-hover-bg);
     color: var(--primary-btn-hover-text);
   }
-  
-  & footer, & footer a {
+
+  & footer,
+  & footer a {
     color: #e0e0e0;
   }
 
   /* specifically target black icons */
-  & img[src*="mail"], & img[src*="github"], & img[src*="linkedin"], & img[src*="phone"], & img[src*="cypress"], & img[src*="api"], & img[src*="git"], & img[src*="open-new-tab"] {
+  & img[src*="mail"],
+  & img[src*="github"],
+  & img[src*="linkedin"],
+  & img[src*="phone"],
+  & img[src*="cypress"],
+  & img[src*="api"],
+  & img[src*="git"],
+  & img[src*="open-new-tab"] {
     filter: invert(1);
   }
 
   & .bio-portrait {
-    filter: invert(0)!important;
+    filter: invert(0) !important;
   }
 
   & .experience-promoted {
     color: #999;
   }
-} 
+
+  .featured-project-title-container {
+    .btn-primary {
+      border-color: #fff !important;
+    }
+  }
+  .slides {
+    background: #2a2a2a !important;
+    border: 1px solid #404040 !important;
+
+    .slide {
+      background: #363636 !important;
+      color: #fff !important;
+    }
+    figure {
+      background: #363636 !important;
+    }
+    figcaption {
+      color: #fff !important;
+    }
+
+
+    @media screen and (min-width: 768px) {
+      .slide-content > :last-child {
+        background: #484848 !important;
+      }
+    }
+
+    a {
+      color: #e0e0e0 !important;
+    }
+  }
+  .slide-navigation {
+    background: #363636 !important;
+  }
+  .slide-indicator {
+    color: #fff !important;
+  }
+
+
+}
