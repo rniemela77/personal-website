@@ -1,0 +1,119 @@
+/* Dark Mode Theme */
+.dark-mode {
+  & .gradient-background {
+    background: linear-gradient(to bottom, var(--dark-bg-gradient-light), var(--dark-bg-gradient-dark));
+  }
+
+  & main {
+    background: var(--dark-bg-main);
+    color: var(--body-text-light);
+    box-shadow: 0 0 20px 0 var(--shadow-dark);
+  }
+
+  & .nav-links li a {
+    color: var(--body-text-light);
+  }
+
+  & .nav-links li a:hover {
+    color: var(--body-text-white);
+  }
+
+  & .bio-title {
+    color: var(--body-text-white);
+  }
+
+  & .skills-list li {
+    border: 1px solid var(--dark-border);
+    background: var(--dark-bg-card);
+    color: var(--body-text-light);
+  }
+
+  & .skills-list li:hover {
+    background: var(--dark-bg-hover);
+    color: var(--body-text-white);
+  }
+
+  & .experience:not(:last-child) {
+    border-bottom: 1px solid var(--dark-border);
+  }
+
+  & .project:not(:last-of-type) {
+    border-bottom: 1px solid var(--dark-border);
+  }
+
+  & #contact {
+    background: var(--dark-bg-card);
+    color: var(--body-text-light);
+  }
+
+  & #contact input,
+  & #contact textarea {
+    background: var(--dark-bg-input);
+    color: var(--body-text-light);
+    border: 1px solid var(--dark-border-input);
+  }
+
+  & #contact input:focus,
+  & #contact textarea:focus {
+    outline: 2px solid var(--primary-color);
+    border-color: var(--primary-color);
+  }
+
+  & footer,
+  & footer a {
+    color: var(--body-text-light);
+  }
+
+  /* specifically target black icons */
+  & img[src*="mail"],
+  & img[src*="github"],
+  & img[src*="linkedin"],
+  & img[src*="phone"],
+  & img[src*="cypress"],
+  & img[src*="api"],
+  & img[src*="git"],
+  & img[src*="open-new-tab"] {
+    filter: invert(1);
+  }
+
+  & .bio-portrait {
+    filter: invert(0) !important;
+  }
+
+  & .experience-promoted {
+    color: var(--body-text-light);
+  }
+
+  .slides {
+    background: var(--dark-bg-main) !important;
+    border: 1px solid var(--dark-border) !important;
+
+    .slide {
+      background: var(--dark-bg-slide) !important;
+      color: var(--body-text-white) !important;
+    }
+    figure {
+      background: var(--dark-bg-slide) !important;
+    }
+    figcaption {
+      color: var(--body-text-white) !important;
+    }
+
+
+    @media screen and (min-width: 768px) {
+      .slide-content > :last-child {
+        background: var(--dark-bg-slide-content) !important;
+      }
+    }
+
+    a {
+      color: var(--body-text-light) !important;
+    }
+  }
+  .slide-navigation {
+    background: var(--dark-bg-nav) !important;
+  }
+  .slide-indicator {
+    color: var(--body-text-white) !important;
+  }
+}

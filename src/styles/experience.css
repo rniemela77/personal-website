@@ -1,0 +1,28 @@
+/* Experience */
+.experience {
+  display: flex;
+  flex-direction: column;
+  padding: 0 0 1rem 0;
+  margin-bottom: 1rem;
+}
+
+.experience:not(:last-child) {
+  border-bottom: 1px solid var(--border-medium-gray);
+}
+
+.experience-promoted {
+  color: var(--text-gray);
+}
+
+.experience h4 {
+  margin-top: 1rem;
+}
+
+.experience ul {
+  padding-left: 2rem;
+  margin-top: 0.2rem;
+}
+
+.experience li {
+  margin-bottom: 0.3rem;
+} 

@@ -143,8 +143,8 @@ projects.forEach((project) => {
       .join("")}</ul>
       
       ${project?.links ? '<div class="project-links">' : ''}
-      ${project?.links?.site ? `<a href="${project.links?.site}" target="_blank" class="btn">View Site</a>` : ''}
-      ${project?.links?.code ? `<a href="${project.links?.code}" target="_blank" class="btn">View Code</a>` : ''}
+      ${project?.links?.site ? `<a href="${project.links?.site}" target="_blank" class="btn btn-secondary-outline">View Site</a>` : ''}
+      ${project?.links?.code ? `<a href="${project.links?.code}" target="_blank" class="btn btn-secondary-outline">View Code</a>` : ''}
       ${project?.links ? '</div>' : ''}
     </div>
     `;

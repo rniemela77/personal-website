@@ -1,0 +1,149 @@
+/* Layout Styles - Combines base, navigation, and footer */
+
+/* Base styles */
+:root {
+  --primary-color: #318461;
+  --secondary-color: #fff;
+  --body-text-light: #f0f0f0;
+  --body-text-dark: #000;
+  --primary-btn-bg: #318461;
+  --primary-btn-text: #f0f0f0;
+  --primary-btn-hover-bg: #359868;
+  --primary-btn-hover-text: #f0f0f0;
+  
+  /* Background colors */
+  --bg-gradient-light: #fafafa;
+  --bg-gradient-dark: #e8e8e8;
+  --bg-white: #ffffff;
+  --bg-light-gray: #f1f1f1;
+  --bg-lighter-gray: #f2f2f2;
+  --bg-lightest-gray: #f9f9f9;
+  --bg-very-light-gray: #f0f0f0;
+  --bg-medium-gray: #e3e3e3;
+  --bg-secondary-light: #e9ecef;
+  --bg-secondary-gray: #dee2e6;
+  --bg-secondary-hover: #e9ecef;
+  
+  /* Border colors */
+  --border-light-gray: #f0f0f0;
+  --border-medium-gray: #cacaca;
+  --border-dark-gray: #bbbbbb;
+  --border-secondary: #dee2e6;
+  --border-secondary-dark: #adb5bd;
+  
+  /* Text colors */
+  --text-gray: #333;
+  --text-light-gray: #444;
+  --text-white: #fff;
+  --text-black: #000;
+  
+  /* Dark mode specific colors */
+  --dark-bg-gradient-light: #1a1a1a;
+  --dark-bg-gradient-dark: #0f0f0f;
+  --dark-bg-main: #2a2a2a;
+  --dark-bg-card: #333;
+  --dark-bg-hover: #444;
+  --dark-bg-input: #444;
+  --dark-bg-slide: #363636;
+  --dark-bg-slide-content: #484848;
+  --dark-bg-nav: #363636;
+  --dark-border: #404040;
+  --dark-border-input: #555;
+  --dark-body-text-dark: #e0e0e0;
+  --dark-body-text-muted: #999;
+  --dark-body-text-white: #fff;
+  
+  /* Button colors */
+  --btn-gray: #444;
+  --btn-gray-hover: #555;
+  --btn-dark-gray: #666;
+  --btn-dark-gray-hover: #484848;
+  
+  /* Shadow colors */
+  --shadow-light: rgba(0, 0, 0, 0.1);
+  --shadow-medium: rgba(0, 0, 0, 0.15);
+  --shadow-dark: rgba(0, 0, 0, 0.5);
+  --shadow-primary: rgba(49, 132, 97, 0.25);
+  --shadow-primary-hover: rgba(49, 132, 97, 0.3);
+  --shadow-white: rgba(255, 255, 255, 0.1);
+  
+  /* LCD effect colors */
+  --lcd-green: #51c24d;
+  --lcd-dark: rgb(25 25 25);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.gradient-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, var(--bg-gradient-light), var(--bg-gradient-dark));
+  z-index: -1;
+}
+
+main {
+  background: var(--bg-white);
+  padding: clamp(1rem, 5vw, 3rem);
+  margin: clamp(1.5rem, 5vw, 3rem);
+  border-radius: 0.5rem;
+  box-shadow: 0 0 10px 0 var(--shadow-light);
+  max-width: 1000px;
+}
+
+section,
+.nav-container {
+  margin-bottom: clamp(1.5rem, 10vw, 3rem);
+}
+
+h2 {
+  margin-bottom: 1rem;
+}
+
+/* Navigation */
+.nav-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.nav-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav-links {
+  display: flex;
+  list-style: none;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: var(--text-black);
+}
+
+/* Footer */
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding: 1rem;
+} 

@@ -13,7 +13,7 @@
     background: linear-gradient(
         to bottom,
         transparent 50%,
-        rgba(0 0 0 / 0.1) 51%
+        var(--shadow-light) 51%
     );
     background-size: 100% 4px;
   }
@@ -24,23 +24,23 @@
     left: 0;
     width: 100vw;
     height: 100vh;
-    background: #51c24d;
+    background: var(--lcd-green);
     mix-blend-mode: multiply;
     z-index: 2147483648;
     pointer-events: none;
     user-select: none;
   }
   & .gradient-background {
-    background: rgb(25 25 25);
+    background: var(--lcd-dark);
   }
   & main * {
     filter: saturate(0);
     font-weight: 900 !important;
-    text-shadow: 0 1px 0px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 1px 0px var(--shadow-dark);
     font-family: 'VT323', monospace!important;
     text-transform: uppercase;
   }
   & footer * {
-    color: #fff !important;
+    color: var(--text-white) !important;
   }
 } 
