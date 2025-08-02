@@ -4,10 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Robert Niemela | Frontend Engineer</title>
-    <link rel="stylesheet" href="styles.css" />
-    <link rel="stylesheet" href="theme-toggle.css" />
-    <link rel="stylesheet" href="lcd-effect.css" />
-    <link rel="stylesheet" href="dark-mode.css" />
+    
+    <!-- Optimized CSS Loading - Only 4 files instead of 14 -->
+    <link rel="stylesheet" href="src/styles/layout.css" />
+    <link rel="stylesheet" href="src/styles/components.css" />
+    <link rel="stylesheet" href="src/styles/featured-project.css" />
+    <link rel="stylesheet" href="src/styles/themes.css" />
+    
     <link rel="icon" href="/favicon.ico" type="image/x-icon" />
 
     <!-- Fonts -->
@@ -38,13 +41,14 @@
         <p class="nav-title">Robert Niemela</p>
 
         <ul class="nav-links">
-          <li><a href="#about">About</a></li>
-          <li><a href="#projects">Projects</a></li>
-          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about" class="btn btn-link">About</a></li>
+          <li><a href="#featured-project" class="btn btn-link">Projects</a></li>
+          <li><a href="#contact" class="btn btn-link">Contact</a></li>
           <li>
             <a
               href="assets/RobertNiemela_Frontend_Developer_Resume.pdf"
               download
+              class="btn btn-link"
               >Resume</a
             >
           </li>
@@ -86,7 +90,7 @@
             <a
               href="assets/RobertNiemela_Frontend_Developer_Resume.pdf"
               target="_blank"
-              class="btn"
+              class="btn btn-secondary-outline"
             >
               <img
                 src="assets/open-new-tab.svg"
@@ -105,7 +109,7 @@
           <h2>Contact</h2>
 
           <div class="contact-links-container">
-            <a href="mailto:rvniemela@hotmail.com" class="btn">
+            <a href="mailto:rvniemela@hotmail.com" class="btn btn-secondary-outline">
               <img
                 src="assets/email.svg"
                 alt="Email icon"
@@ -118,7 +122,7 @@
             <a
               href="https://www.linkedin.com/in/robert-niemela/"
               target="_blank"
-              class="btn"
+              class="btn btn-secondary-outline"
             >
               <img
                 src="assets/linkedin.svg"
@@ -129,7 +133,7 @@
               <span>linkedin.com/in/robert-niemela</span>
             </a>
 
-            <a href="tel:4807731040" class="btn">
+            <a href="tel:4807731040" class="btn btn-secondary-outline">
               <img
                 src="assets/phone.svg"
                 alt="Phone icon"
@@ -139,7 +143,7 @@
               <span>(480) 773-1040</span>
             </a>
 
-            <a href="https://github.com/rniemela77" target="_blank" class="btn">
+            <a href="https://github.com/rniemela77" target="_blank" class="btn btn-secondary-outline">
               <img
                 src="assets/github.svg"
                 alt="GitHub logo"
@@ -347,13 +351,11 @@
             <a
               href="https://somni.netlify.app/"
               target="_blank"
-              class="btn btn-primary"
               >View Site</a
             >
             <a
               href="https://github.com/rniemela77/somni"
               target="_blank"
-              class="btn btn-primary"
             >
               View Code
             </a>
@@ -596,9 +598,9 @@
         </div>
 
         <div class="slide-navigation">
-          <button id="prev-slide" class="btn slide-nav-btn">← PREV</button>
+          <button id="prev-slide" class="btn btn-primary">← PREV</button>
           <span id="slide-indicator" class="slide-indicator">1 / 4</span>
-          <button id="next-slide" class="btn slide-nav-btn">NEXT →</button>
+          <button id="next-slide" class="btn btn-primary">NEXT →</button>
         </div>
       </section>
 
@@ -607,7 +609,7 @@
 
         <div id="projects-list" class="collapsed"></div>
 
-        <button class="btn" id="view-more-button">See more projects</button>
+        <button class="btn btn-secondary" id="view-more-button">See more projects</button>
       </section>
 
       <section id="contact">
