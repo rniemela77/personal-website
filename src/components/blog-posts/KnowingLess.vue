@@ -18,9 +18,9 @@
                     desk because it feels right, but
                     really, your brain is wired to prefer clear sightlines for safety. "It seems right."</blockquote>
             </li>
-            <li>Fourth: You don't know that you don't know something. <blockquote class="text-muted">Like you've been using a
-                    word wrong your whole life until
-                    someone correctes you in a coffee shop. "I had no idea!"</blockquote>
+            <li>Fourth: You don't know that you don't know something. <blockquote class="text-muted">Example: You've
+                    been using a word wrong your whole life until someone corrects you. "I had no idea!"
+                </blockquote>
             </li>
         </ul>
 
