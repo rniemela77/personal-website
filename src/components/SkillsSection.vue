@@ -129,15 +129,4 @@ const skills = [
 .skill:hover img {
     filter: brightness(1.2);
 }
-
-@media (max-width: 768px) {
-    .skill-section-list {
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-    
-    .skill {
-        min-width: 80px;
-    }
-}
 </style>

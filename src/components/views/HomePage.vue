@@ -56,6 +56,14 @@
                 <ContactSection />
             </div>
         </section>
+
+        <section id="resume" class="animate-on-scroll" data-animation="slide-up">
+            <h2 class="section-title">Resume</h2>
+
+            <div class="section-card">
+                <ResumeSection />
+            </div>
+        </section>
     </div>
 </template>
 
@@ -68,6 +76,7 @@ import SkillsSection from '../SkillsSection.vue';
 import EducationSection from '../EducationSection.vue';
 import ExperienceSection from '../ExperienceSection.vue';
 import ContactSection from '../ContactSection.vue';
+import ResumeSection from '../ResumeSection.vue';
 
 onMounted(() => {
     const observerOptions = {
@@ -184,4 +193,5 @@ onMounted(() => {
         animation: none;
     }
 }
+
 </style>
