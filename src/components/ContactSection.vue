@@ -31,7 +31,6 @@ const contactItems = [
 </script>
 
 <style scoped>
-
 .contact-container {
     display: flex;
     flex-wrap: wrap;
@@ -44,5 +43,4 @@ const contactItems = [
     gap: 10px;
     flex: 1;
 }
-
 </style>

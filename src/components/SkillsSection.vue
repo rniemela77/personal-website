@@ -93,5 +93,40 @@ const skills = [
     display: flex;
     flex-direction: column;
     align-items: center;
+    transition: all 0.3s ease;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.skill:hover {
+    transform: translateY(-3px);
+    background: rgba(59, 212, 150, 0.1);
+}
+
+.skill-icon {
+    transition: transform 0.3s ease;
+    margin-bottom: 8px;
+}
+
+.skill:hover .skill-icon {
+    transform: scale(1.2);
+}
+
+.skill b {
+    transition: color 0.3s ease;
+    font-size: 12px;
+    text-align: center;
+}
+
+.skill:hover b {
+    color: var(--accent-color);
+}
+
+.skill img {
+    transition: filter 0.3s ease;
+}
+
+.skill:hover img {
+    filter: brightness(1.2);
 }
 </style>
