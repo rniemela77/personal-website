@@ -1,11 +1,11 @@
 <template>
     <div class="resume-links">
         <a href="/assets/RobertNiemela_Frontend_Developer_Resume.pdf" target="_blank" class="resume-link">
-            <img src="/public/assets/icons/open-new-tab.svg" alt="PDF Icon" class="pdf-icon" />
+            <img src="/assets/icons/open-new-tab.svg" alt="PDF Icon" class="pdf-icon" />
             View Resume
         </a>
         <a href="/assets/RobertNiemela_Frontend_Developer_Resume.pdf" download class="resume-link">
-            <img src="/public/assets/icons/download.svg" alt="PDF Icon" class="pdf-icon" />
+            <img src="/assets/icons/download.svg" alt="PDF Icon" class="pdf-icon" />
             Download PDF
         </a>
     </div>
