@@ -14,6 +14,10 @@
                 <hr class="section-divider">
 
                 <ChuzapathProject />
+
+                <hr class="section-divider">
+
+                <DoohickeyInteractiveProject />
             </div>
         </section>
 
@@ -71,6 +75,7 @@
 import { onMounted } from 'vue'
 import SomniProject from '../SomniProject.vue'
 import ChuzapathProject from '../ChuzapathProject.vue'
+import DoohickeyInteractiveProject from '../DoohickeyInteractiveProject.vue'
 import BlogsContainer from '../BlogsContainer.vue';
 import SkillsSection from '../SkillsSection.vue';
 import EducationSection from '../EducationSection.vue';
@@ -160,6 +165,7 @@ onMounted(() => {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -171,7 +177,7 @@ onMounted(() => {
     .animate-on-scroll {
         transform: translateY(20px);
     }
-    
+
     [data-animation="slide-up"] {
         transform: translateY(25px);
     }
@@ -184,14 +190,13 @@ onMounted(() => {
         transform: none;
         opacity: 1;
     }
-    
+
     .animate-on-scroll.animate {
         transform: none;
     }
-    
+
     .animate-on-scroll.animate .section-card {
         animation: none;
     }
 }
-
 </style>

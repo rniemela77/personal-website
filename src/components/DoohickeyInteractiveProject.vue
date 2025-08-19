@@ -1,18 +1,18 @@
 <template>
     <div class="project">
         <div class="project-image">
-            <img src="/assets/images/chuzapath.png" alt="Chuzapath" width="100%">
+            <img src="/assets/images/doohickeyinteractive.png" alt="Doohickey Interactive" width="100%">
         </div>
 
         <div class="project-description">
-            <h3 class="project-title">Chuzapath</h3>
+            <h3 class="project-title">Doohickey Interactive</h3>
 
-            <p class="text-muted">AI-driven choose-your-own-adventure game. Player makes choices, AI generates story.</p>
+            <p class="text-muted">Interactive experience featuring puzzles, effects, audio and a mysterious story.</p>
 
-            <p class="text-muted text-small"><b>Built with Vue.js, OpenAI API, and Netlify Functions.</b></p>
+            <p class="text-muted text-small"><b>Built with Vue.js.</b></p>
 
-            <a href="https://chuzapath.netlify.app" target="_blank">View Project</a> | <a
-                href="https://github.com/rniemela77/CYOA-game" target="_blank">GitHub</a>
+            <a href="https://doohickey-interactive.netlify.app" target="_blank">View Project</a> | <a
+                href="https://github.com/rniemela77/doohickey-interactive" target="_blank">GitHub</a>
         </div>
     </div>
 </template>
