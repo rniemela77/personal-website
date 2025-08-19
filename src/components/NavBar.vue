@@ -185,6 +185,7 @@ const scrollToSection = async (sectionId) => {
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
+    overflow: hidden;
 }
 
 .mobile-menu.open {
