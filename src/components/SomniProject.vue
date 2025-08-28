@@ -1,11 +1,11 @@
 <template>
 	<div class="project">
 		<div class="project-image">
-			<img src="/assets/images/somni.png" alt="Somni" width="100%" />
+			<img src="/assets/images/somni.jpg" alt="Somni" width="100%" loading="lazy"/>
 		</div>
 
 		<div class="project-description">
-			<h3 class="project-title">Somni - Personality Analyzer</h3>
+			<h3 class="project-title">Somni</h3>
 
 			<p class="text-muted">
 				I wanted a personality quiz that went deeper than the usual tests. So I built one that uses AI to

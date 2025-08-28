@@ -1,7 +1,7 @@
 <template>
     <div class="project">
         <div class="project-image">
-            <img src="/assets/images/doohickeyinteractive.png" alt="Doohickey Interactive" width="100%">
+            <img src="/assets/images/doohickeyinteractive.jpg" alt="Doohickey Interactive" width="100%" loading="lazy">
         </div>
 
         <div class="project-description">

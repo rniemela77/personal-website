@@ -1,7 +1,7 @@
 <template>
     <div class="project">
         <div class="project-image">
-            <img src="/assets/images/chuzapath.png" alt="Chuzapath" width="100%">
+            <img src="/assets/images/chuzapath.jpg" alt="Chuzapath" width="100%" loading="lazy">
         </div>
 
         <div class="project-description">
