@@ -30,7 +30,7 @@
         <p>I imagine a more guided "story-telling" vibe in the user flow that puts more emphasis on the AI content would turn this app into something far more impressive.</p>
 
         <hr class="section-divider"></hr>
-        <p>Check out the app <a href="https://somni.netlify.app" target="_blank">here</a>, and let me know what you think!</p>
+        <p>Check out the app <a href="https://somni.quest" target="_blank">here</a>, and let me know what you think!</p>
     </div>
 </template>
 

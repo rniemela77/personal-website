@@ -17,7 +17,7 @@
 				<b>Built with Vue.js, TypeScript, OpenAI API, Firebase, and Netlify Functions.</b>
 			</p>
 
-			<a href="https://somni.netlify.app" target="_blank">View Project</a> | <a
+			<a href="https://somni.quest" target="_blank">View Project</a> | <a
 				href="https://github.com/rniemela77/somni" target="_blank">GitHub</a>
 		</div>
 	</div>
