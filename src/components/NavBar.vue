@@ -38,9 +38,8 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRouter } from 'vue-router'
+import { useScrollToSection } from '../useScrollToSection'
 
-const router = useRouter()
 const isMobileMenuOpen = ref(false)
 
 const navItems = [
@@ -77,23 +76,11 @@ const closeMobileMenu = () => {
     document.body.style.overflow = ''
 }
 
+const { scrollToSection } = useScrollToSection()
+
 const handleMobileNavClick = async (sectionId) => {
     await scrollToSection(sectionId)
     closeMobileMenu()
-}
-
-const scrollToSection = async (sectionId) => {
-    // navigate to home page if not on /
-    if (window.location.pathname !== '/') {
-        await router.push('/')
-    }
-
-    const section = document.getElementById(sectionId.replace('#', ''));
-    // scroll a little above the section to compensate for the sticky navbar
-    window.scrollTo({
-        top: section.offsetTop - 100,
-        behavior: 'smooth'
-    });
 }
 </script>
 

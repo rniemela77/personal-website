@@ -2,7 +2,9 @@
     <div>
         <div class="name-title animate-on-scroll" data-animation="fade-in">
             <h1 class="name">Robert Niemela</h1>
-            <p class="title">Front-End Engineer</p>
+            <p class="title">Full-Stack Web Developer - Front-End Focused</p>
+            <button class="view-my-work-btn" @click="scrollToSection('#projects')">View My Projects</button>
+            <p class="bio">I build elegant, high-performance web applications with Vue & Laravel. Fast, scalable, and human-centered.<br></br>Built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality app combining psychology and AI. 4+ years turning UX into intuitive interfaces.</p>
         </div>
 
         <section id="projects" class="animate-on-scroll" data-animation="slide-up">
@@ -18,14 +20,6 @@
                 <hr class="section-divider">
 
                 <DoohickeyInteractiveProject />
-            </div>
-        </section>
-
-        <section id="blog" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Blogs</h2>
-
-            <div class="section-card">
-                <BlogsContainer />
             </div>
         </section>
 
@@ -53,6 +47,14 @@
             </div>
         </section>
 
+        <section id="blog" class="animate-on-scroll" data-animation="slide-up">
+            <h2 class="section-title">Blogs</h2>
+
+            <div class="section-card">
+                <BlogsContainer />
+            </div>
+        </section>
+
         <section id="contact" class="animate-on-scroll" data-animation="slide-up">
             <h2 class="section-title">Contact</h2>
 
@@ -73,6 +75,7 @@
 
 <script setup>
 import { onMounted } from 'vue'
+import { useScrollToSection } from '../../useScrollToSection'
 import SomniProject from '../SomniProject.vue'
 import ChuzapathProject from '../ChuzapathProject.vue'
 import DoohickeyInteractiveProject from '../DoohickeyInteractiveProject.vue'
@@ -82,6 +85,8 @@ import EducationSection from '../EducationSection.vue';
 import ExperienceSection from '../ExperienceSection.vue';
 import ContactSection from '../ContactSection.vue';
 import ResumeSection from '../ResumeSection.vue';
+
+const { scrollToSection } = useScrollToSection()
 
 onMounted(() => {
     const observerOptions = {
@@ -110,10 +115,26 @@ onMounted(() => {
 
 .name {
     font-size: 48px;
+    margin-bottom: 1rem;
 }
 
 .title {
-    font-size: 24px;
+    font-size: 20px;
+    font-weight: 300;
+    color: #62ffc1;
+}
+
+.bio {
+    max-width: 546.7px;
+    display: block;
+    line-height: 2;
+    text-align: left;
+    margin: 0 auto;
+    font-size: 16px;
+    color: #d3d3d3;
+    margin-top: 2.5rem;
+    margin-bottom: 8rem;
+    padding: 1rem;
 }
 
 .section-card {
