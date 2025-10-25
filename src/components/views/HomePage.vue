@@ -2,8 +2,8 @@
     <div>
         <div class="name-title animate-on-scroll" data-animation="fade-in">
             <h1 class="name">Robert Niemela</h1>
-            <p class="title">Full-Stack Web Developer - Front-End Focused</p>
-            <button class="view-my-work-btn" @click="scrollToSection('#projects')">View My Projects</button>
+            <p class="title">Full-Stack Web Developer (Front-End Focused)</p>
+            <button class="btn-primary" @click="scrollToSection('#projects')">View My Projects</button>
             <p class="bio">I build elegant, high-performance web applications with Vue & Laravel. Fast, scalable, and human-centered.<br></br>Built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality app combining psychology and AI. 4+ years turning UX into intuitive interfaces.</p>
         </div>
 
@@ -70,6 +70,16 @@
                 <ResumeSection />
             </div>
         </section>
+
+        <div class="text-center">
+            <h2>Ready to bring thoughtful front-end engineering to your team.</h2>
+
+            <div class="btn-container">
+                <button class="btn-primary" @click="scrollToSection('#contact')">Hire Me</button>
+
+                <button class="btn-primary" @click="scrollToSection('#projects')">View Projects</button>
+            </div>
+        </div>
     </div>
 </template>
 
@@ -85,10 +95,12 @@ import EducationSection from '../EducationSection.vue';
 import ExperienceSection from '../ExperienceSection.vue';
 import ContactSection from '../ContactSection.vue';
 import ResumeSection from '../ResumeSection.vue';
+import ConsoleLog from '../ConsoleLog';
 
 const { scrollToSection } = useScrollToSection()
 
 onMounted(() => {
+    ConsoleLog()
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -50px 0px'
@@ -115,6 +127,7 @@ onMounted(() => {
 
 .name {
     font-size: 48px;
+    margin-top: 3rem;
     margin-bottom: 1rem;
 }
 
@@ -144,6 +157,36 @@ onMounted(() => {
     box-shadow: 0 0 10px 0 rgba(0 255 221 / 0.11);
     border-radius: 10px;
     padding: 20px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.btn-container {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    margin: 2rem 0 4rem;
+}
+
+.btn-primary {
+    background: #3BD496;
+    color: #000;
+    border: 1px solid transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    text-decoration: none;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    &:hover {
+        background: white;
+    }
 }
 
 /* Animation base styles */

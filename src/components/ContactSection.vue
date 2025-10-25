@@ -1,5 +1,7 @@
 <template>
     <div class="contact-section">
+        <h3>I'm open to full-time opportunities and collaborations.</h3>
+        
         <div class="contact-container">
             <div class="contact-item" v-for="item in contactItems" :key="item.name">
                 <h3>{{ item.name }}</h3>

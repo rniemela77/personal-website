@@ -1,10 +1,10 @@
 <template>
     <div class="resume-links">
-        <a href="/assets/RobertNiemela_Frontend_Developer_Resume.pdf" target="_blank" class="resume-link">
+        <a href="/assets/robert_niemela_fullstack_resume.pdf" target="_blank" class="resume-link">
             <img src="/assets/icons/open-new-tab.svg" alt="PDF Icon" class="pdf-icon" />
             View Resume
         </a>
-        <a href="/assets/RobertNiemela_Frontend_Developer_Resume.pdf" download class="resume-link">
+        <a href="/assets/robert_niemela_fullstack_resume.pdf" download class="resume-link">
             <img src="/assets/icons/download.svg" alt="PDF Icon" class="pdf-icon" />
             Download PDF
         </a>
@@ -14,7 +14,7 @@
 <style scoped>
 .resume-links {
     display: flex;
-    gap: 20px;
+    gap: 40px;
 
     @media (max-width: 600px) {
         flex-direction: column;

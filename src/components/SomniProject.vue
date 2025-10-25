@@ -49,6 +49,7 @@
 	max-width: 800px;
 	border-radius: 10px;
 	border: 0.5px solid #000;
+    box-shadow: 0 0 5px 0 rgba(0 255 221 / 0.7);
 }
 
 @media screen and (max-width: 800px) {

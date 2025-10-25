@@ -42,6 +42,7 @@ img {
     height: auto;
     border-radius: 10px;
 	border: 0.5px solid #000;
+    box-shadow: 0 0 4px 0 rgba(0 255 221 / 0.4);
 }
 
 @media screen and (max-width: 800px) {
