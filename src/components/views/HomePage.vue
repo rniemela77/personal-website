@@ -72,7 +72,7 @@
         </section>
 
         <div class="text-center">
-            <h2>Ready to bring thoughtful front-end engineering to your team.</h2>
+            <h2>Ready to bring thoughtful engineering to your team.</h2>
 
             <div class="btn-container">
                 <button class="btn-primary" @click="scrollToSection('#contact')">Hire Me</button>
