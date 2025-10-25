@@ -4,7 +4,7 @@
             <h1 class="name">Robert Niemela</h1>
             <p class="title">Full-Stack Web Developer (Front-End Focused)</p>
             <button class="btn-primary" @click="scrollToSection('#projects')">View My Projects</button>
-            <p class="bio">I build elegant, high-performance web applications with Vue & Laravel. Fast, scalable, and human-centered.<br></br>Built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality app combining psychology and AI. 4+ years turning UX into intuitive interfaces.</p>
+            <p class="bio">I build elegant, high-performance web applications with Vue & Laravel that are fast, scalable, and human-centered.<br></br>Built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality app combining psychology and AI. 4+ years turning UX into intuitive interfaces.</p>
         </div>
 
         <section id="projects" class="animate-on-scroll" data-animation="slide-up">
@@ -138,7 +138,7 @@ onMounted(() => {
 }
 
 .bio {
-    max-width: 546.7px;
+    max-width: 556px;
     display: block;
     line-height: 2;
     text-align: left;
