@@ -3,8 +3,12 @@
         <div class="name-title animate-on-scroll" data-animation="fade-in">
             <h1 class="name">Robert Niemela</h1>
             <p class="title">Full-Stack Web Developer (Front-End Focused)</p>
-            <button class="btn-primary" @click="scrollToSection('#projects')">View My Projects</button>
-            <p class="bio">I build elegant, high-performance web applications with Vue & Laravel that are fast, scalable, and human-centered.<br></br>Built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality app combining psychology and AI. 4+ years turning UX into intuitive interfaces.</p>
+            <button class="btn-primary btn-glow" @click="scrollToSection('#projects')">View My Projects</button>
+            <div class="bio">
+                <p>I build clean, optimized UIs and thoughtful full-stack applications with a focus on performance and usability.</p>
+                <p>I approach every project with a beginner's mind- experimenting, refining, and solving problems creatively.</p>
+                <p>Recently, I built <a href="https://somni.quest" target="_blank">Somni</a>, an AI-powered personality platform that blends psychology, mythology, and modern user experience.</p>
+            </div>
         </div>
 
         <section id="projects" class="animate-on-scroll" data-animation="slide-up">
@@ -103,7 +107,7 @@ onMounted(() => {
     ConsoleLog()
     const observerOptions = {
         threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+        rootMargin: '0px 0px -20px 0px'
     };
 
     const observer = new IntersectionObserver((entries) => {
@@ -127,26 +131,31 @@ onMounted(() => {
 
 .name {
     font-size: 48px;
-    margin-top: 3rem;
-    margin-bottom: 1rem;
+    margin-top: 80px;
+    margin-bottom: 0;
+    line-height: 1;
 }
 
 .title {
+    margin-top: 0;
     font-size: 20px;
     font-weight: 300;
     color: #62ffc1;
+    margin-bottom: 3rem;
+}
+
+.btn-glow {
+    box-shadow: 0 0 36px rgb(0 255 221 / 15%);
 }
 
 .bio {
-    max-width: 556px;
+    max-width: 65ch;
     display: block;
     line-height: 2;
     text-align: left;
-    margin: 0 auto;
+    margin: 1.5rem auto clamp(4rem, 8vw, 8rem);
     font-size: 16px;
     color: #d3d3d3;
-    margin-top: 2.5rem;
-    margin-bottom: 8rem;
     padding: 1rem;
 }
 
