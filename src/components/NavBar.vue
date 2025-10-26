@@ -89,7 +89,7 @@ const handleMobileNavClick = async (sectionId) => {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding: 20px 5% 20px 5%;
+    padding: 20px calc(5% - 20px) 20px calc(5% - 20px);
     position: sticky;
     top: 0;
     z-index: 100;
