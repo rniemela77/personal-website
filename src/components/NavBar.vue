@@ -1,5 +1,14 @@
 <template>
     <nav class="navbar">
+        <h1 class="navbar-title" :class="{ visible: showTitle }">
+            <div>
+            Robert Niemela
+            </div>
+            <div class="text-primary">
+            Full-Stack Developer
+            </div>
+        </h1>
+
         <!-- Desktop Navigation -->
         <ul class="nav-desktop">
             <li v-for="item in navItems" :key="item.name">
@@ -37,10 +46,12 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
-import { useScrollToSection } from '../useScrollToSection'
+import { ref, onMounted, onBeforeUnmount } from 'vue'
+import { useRouter } from 'vue-router'
+import { scrollToSection as scrollToSectionHelper } from '../helpers/scrollToSection'
 
 const isMobileMenuOpen = ref(false)
+const showTitle = ref(false)
 
 const navItems = [
     {
@@ -48,12 +59,12 @@ const navItems = [
         href: '#projects'
     },
     {
-        name: 'Blog',
-        href: '#blog'
-    },
-    {
         name: 'Skills',
         href: '#skills'
+    },
+    {
+        name: 'Experience',
+        href: '#experience'
     },
     {
         name: 'Contact',
@@ -76,12 +87,29 @@ const closeMobileMenu = () => {
     document.body.style.overflow = ''
 }
 
-const { scrollToSection } = useScrollToSection()
+const router = useRouter()
+
+const scrollToSection = async (sectionId) => scrollToSectionHelper(router, sectionId)
 
 const handleMobileNavClick = async (sectionId) => {
-    await scrollToSection(sectionId)
+    // Close menu first so body can scroll
     closeMobileMenu()
+    await scrollToSection(sectionId)
 }
+
+const updateShowTitleOnScroll = () => {
+    const y = window.scrollY || window.pageYOffset || 0
+    showTitle.value = y > 250
+}
+
+onMounted(() => {
+    updateShowTitleOnScroll()
+    window.addEventListener('scroll', updateShowTitleOnScroll, { passive: true })
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('scroll', updateShowTitleOnScroll)
+})
 </script>
 
 <style scoped>
@@ -95,12 +123,30 @@ const handleMobileNavClick = async (sectionId) => {
     z-index: 100;
     background: rgba(26, 26, 26, 0.9);
     backdrop-filter: blur(30px);
+    min-height: 44px;
+}
+
+.navbar-title {
+    padding-left: calc(5% - 20px);
+    margin: 0;
+    font-size: 14px;
+    opacity: 0;
+    transform: translateY(-4px);
+    transition: opacity 250ms ease, transform 250ms ease;
+}
+.navbar-title.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+.text-primary {
+    color: var(--accent-color);
 }
 
 /* Desktop Navigation */
 .nav-desktop {
     display: flex;
-    gap: 40px;
+    width: 100%;
+    justify-content: space-between;
     padding: 0;
     margin: 0;
     list-style: none;
@@ -226,9 +272,13 @@ const handleMobileNavClick = async (sectionId) => {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 856px) {
     .navbar {
-        justify-content: flex-end;
+        justify-content: space-between;
+    }
+
+    .navbar-title {
+        display: block;
     }
     
     .nav-desktop {
@@ -244,12 +294,16 @@ const handleMobileNavClick = async (sectionId) => {
     }
 }
 
-@media (min-width: 769px) {
+@media (min-width: 856px) {
     .hamburger-btn {
         display: none;
     }
     
     .mobile-menu {
+        display: none;
+    }
+
+    .navbar-title {
         display: none;
     }
 }

@@ -15,8 +15,28 @@
 </template>
 
 <script setup>
+import { onMounted, onBeforeUnmount } from 'vue'
 import NavBar from './components/NavBar.vue'
 import AppBackground from './components/AppBackground.vue'
+import ConsoleLog from './components/ConsoleLog';
+
+const setNavOffsetVar = () => {
+    const navbar = document.querySelector('.navbar')
+    if (!navbar) return
+    const height = navbar.getBoundingClientRect().height
+    document.documentElement.style.setProperty('--nav-offset', `${Math.round(height)}px`)
+}
+
+onMounted(() => {
+    ConsoleLog()
+
+    setNavOffsetVar()
+    window.addEventListener('resize', setNavOffsetVar, { passive: true })
+})
+
+onBeforeUnmount(() => {
+    window.removeEventListener('resize', setNavOffsetVar)
+})
 </script>
 
 <style>
@@ -114,4 +134,11 @@ a {
     border: 1px solid #3BD4971C;
     margin: 30px 0;
 }
+
+/* Ensure anchor scrolling accounts for sticky navbar */
+[id] {
+    scroll-margin-top: var(--nav-offset, 100px);
+}
+
+
 </style>

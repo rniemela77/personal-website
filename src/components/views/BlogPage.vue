@@ -9,7 +9,7 @@
 </template>
 
 <script setup>
-import { computed } from 'vue'
+import { computed, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import SomniProgress from '../blog-posts/SomniProgress.vue'
 import KnowingLess from '../blog-posts/KnowingLess.vue'
@@ -32,8 +32,17 @@ const component = computed(() => {
 })
 
 const goBack = () => {
+    if (window.history.length > 1) {
+        router.back()
+    } else {
     router.push('/')
 }
+}
+
+// when user loads page, scroll to the top of the page
+onMounted(() => {
+    window.scrollTo(0, 0)
+})
 </script>
 
 <style scoped>

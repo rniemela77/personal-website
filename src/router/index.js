@@ -19,7 +19,55 @@ const routes = [
 
 const router = createRouter({
   history: createWebHistory(),
-  routes
+  routes,
+  // Scroll behavior:
+  // - Hash routes: wait for element; smooth on Home, instant when coming from Blog
+  // - Non-hash routes: keep position (avoid flashing top)
+  // Note: 320ms fallback roughly matches the page transition; enough time for mount/layout
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    }
+
+    if (to.hash) {
+      const selector = to.hash
+      const findEl = () => document.querySelector(selector)
+      return new Promise(async (resolve) => {
+        // Instant scroll from Blog, smooth scroll otherwise
+        const fromBlog = !!from && ((from.name === 'Blog') || (from.path && from.path.startsWith('/blog')))
+        const behavior = fromBlog ? 'auto' : 'smooth'
+        // Wait a few frames (~16ms each) for the element, then short timeout as fallback
+        for (let i = 0; i < 4; i++) {
+          await new Promise(requestAnimationFrame)
+          const el = findEl()
+          if (el) {
+            const navOffsetStr = getComputedStyle(document.documentElement).getPropertyValue('--nav-offset') || '0'
+            const navOffset = parseInt(navOffsetStr, 10) || 0
+            const rect = el.getBoundingClientRect()
+            const top = window.pageYOffset + rect.top - navOffset
+            resolve({ left: 0, top, behavior })
+            return
+          }
+        }
+        setTimeout(() => {
+          const el = findEl()
+          if (el) {
+            const navOffsetStr = getComputedStyle(document.documentElement).getPropertyValue('--nav-offset') || '0'
+            const navOffset = parseInt(navOffsetStr, 10) || 0
+            const rect = el.getBoundingClientRect()
+            const top = window.pageYOffset + rect.top - navOffset
+            resolve({ left: 0, top, behavior })
+          } else {
+            // If still missing, do nothing; avoids warnings/scroll-to-top flashes
+            resolve(undefined)
+          }
+        }, 320)
+      })
+    }
+
+    // Keep position for non-hash routes
+    return undefined
+  }
 })
 
 export default router 

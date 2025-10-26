@@ -11,67 +11,81 @@
             </div>
         </div>
 
-        <section id="projects" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Featured Projects</h2>
+        <section id="projects">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Featured Projects</h2>
 
-            <div class="section-card">
-                <SomniProject />
+                <div class="section-card">
+                    <SomniProject />
 
-                <hr class="section-divider">
+                    <hr class="section-divider">
 
-                <ChuzapathProject />
+                    <ChuzapathProject />
 
-                <hr class="section-divider">
+                    <hr class="section-divider">
 
-                <DoohickeyInteractiveProject />
+                    <DoohickeyInteractiveProject />
+                </div>
             </div>
         </section>
 
-        <section id="skills" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Skills</h2>
+        <section id="skills">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Skills</h2>
 
-            <div class="section-card">
-                <SkillsSection />
+                <div class="section-card">
+                    <SkillsSection />
+                </div>
             </div>
         </section>
 
-        <section id="education" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Education</h2>
+        <section id="education">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Education</h2>
 
-            <div class="section-card">
-                <EducationSection />
+                <div class="section-card">
+                    <EducationSection />
+                </div>
             </div>
         </section>
 
-        <section id="experience" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Experience</h2>
+        <section id="experience">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Experience</h2>
 
-            <div class="section-card">
-                <ExperienceSection />
+                <div class="section-card">
+                    <ExperienceSection />
+                </div>
             </div>
         </section>
 
-        <section id="blog" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Blogs</h2>
+        <section id="blog">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Blogs</h2>
 
-            <div class="section-card">
-                <BlogsContainer />
+                <div class="section-card">
+                    <BlogsContainer />
+                </div>
             </div>
         </section>
 
-        <section id="contact" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Contact</h2>
+        <section id="contact">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Contact</h2>
 
-            <div class="section-card">
-                <ContactSection />
+                <div class="section-card">
+                    <ContactSection />
+                </div>
             </div>
         </section>
 
-        <section id="resume" class="animate-on-scroll" data-animation="slide-up">
-            <h2 class="section-title">Resume</h2>
+        <section id="resume">
+            <div class="animate-on-scroll" data-animation="slide-up">
+                <h2 class="section-title">Resume</h2>
 
-            <div class="section-card">
-                <ResumeSection />
+                <div class="section-card">
+                    <ResumeSection />
+                </div>
             </div>
         </section>
 
@@ -89,7 +103,8 @@
 
 <script setup>
 import { onMounted } from 'vue'
-import { useScrollToSection } from '../../useScrollToSection'
+import { useRouter } from 'vue-router'
+import { scrollToSection as scrollToSectionHelper } from '../../helpers/scrollToSection'
 import SomniProject from '../SomniProject.vue'
 import ChuzapathProject from '../ChuzapathProject.vue'
 import DoohickeyInteractiveProject from '../DoohickeyInteractiveProject.vue'
@@ -99,12 +114,11 @@ import EducationSection from '../EducationSection.vue';
 import ExperienceSection from '../ExperienceSection.vue';
 import ContactSection from '../ContactSection.vue';
 import ResumeSection from '../ResumeSection.vue';
-import ConsoleLog from '../ConsoleLog';
 
-const { scrollToSection } = useScrollToSection()
+const router = useRouter()
+const scrollToSection = async (sectionId) => scrollToSectionHelper(router, sectionId)
 
 onMounted(() => {
-    ConsoleLog()
     const observerOptions = {
         threshold: 0.1,
         rootMargin: '0px 0px -20px 0px'
