@@ -8,9 +8,7 @@
 			<h3 class="project-title">Somni</h3>
 
 			<p class="text-muted">
-				I wanted a personality quiz that went deeper than the usual tests. So I built one that uses AI to
-				analyze users across 16+ spectrums, matching them with mythological figures, tarot archetypes, and spirit animals. It's not
-				perfect yet, but it's a start.
+				Somni is an AI-powered personality app that reimagines self-discovery. Through 20 interactive quizzes, it builds a personal profile and transforms it into a unique mythic archetype, complete with insights into essence, challenges, and destiny.
 			</p>
 
 			<p class="text-muted text-small">
