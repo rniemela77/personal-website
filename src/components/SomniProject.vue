@@ -17,6 +17,10 @@
 
 			<a href="https://somni.quest" target="_blank">View Project</a> | <a
 				href="https://github.com/rniemela77/somni" target="_blank">GitHub</a>
+
+			<div class="case-study-link">
+				<router-link to="/blog/somni-case-study">Read the full case study →</router-link>
+			</div>
 		</div>
 	</div>
 </template>
@@ -48,6 +52,10 @@
 	border-radius: 10px;
 	border: 0.5px solid #000;
     box-shadow: 0 0 5px 0 rgba(0 255 221 / 0.7);
+}
+
+.case-study-link {
+	margin-top: 30px;
 }
 
 @media screen and (max-width: 800px) {

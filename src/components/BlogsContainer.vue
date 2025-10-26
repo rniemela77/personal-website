@@ -6,6 +6,8 @@
 
                 <p class="text-muted">{{ blog.description }}</p>
 
+                <p class="date"><small>{{ blog.date }}</small></p>
+
                 <a :href="`/blog/${blog.slug}`">Read More</a>
             </div>
         </div>
@@ -13,19 +15,18 @@
 </template>
 
 <script setup>
-import SomniProgress from './blog-posts/SomniProgress.vue'
-import KnowingLess from './blog-posts/KnowingLess.vue'
-
 const blogs = [
     {
-        title: 'Building a personality quiz that goes deeper',
-        description: 'I built a quiz that ditches rigid categories for AI generated profiles, mixing psychology with mythology.',
-        slug: 'building-personality-quiz',
+        title: 'Somni Case Study',
+        description: 'I built the personality app from the ground up, and learned a lot in the process.',
+        slug: 'somni-case-study',
+        date: 'October 26, 2025',
     },
     {
-        title: 'Knowing Less, Growing More',
-        description: 'How to grow without falling apart.',
+        title: 'Openness to Learning',
+        description: 'Notes on how to grow and learn.',
         slug: 'knowing-less-growing-more',
+        date: 'August 10, 2025',
     }
 ]
 </script>
@@ -49,5 +50,11 @@ const blogs = [
     border: 1px solid #3BD4971C;
     border-radius: 10px;
     padding: 20px;
+}
+
+.date {
+    font-size: 12px;
+    font-style: italic;
+    color: #ccc;
 }
 </style>

@@ -16,7 +16,7 @@ import KnowingLess from '../blog-posts/KnowingLess.vue'
 
 const posts = [
     {
-        slug: 'building-personality-quiz',
+        slug: 'somni-case-study',
         component: SomniProgress
     },
     {
@@ -35,8 +35,8 @@ const goBack = () => {
     if (window.history.length > 1) {
         router.back()
     } else {
-    router.push('/')
-}
+        router.push('/')
+    }
 }
 
 // when user loads page, scroll to the top of the page
