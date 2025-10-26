@@ -2,7 +2,7 @@
     <div>
         <div class="name-title animate-on-scroll" data-animation="fade-in">
             <h1 class="name">Robert Niemela</h1>
-            <p class="title">Full-Stack Web Developer (Front-End Focused)</p>
+            <p class="title">Full-Stack Web Developer <span class="title-parentheses">(Front-End Focused)</span></p>
             <button class="btn-primary btn-glow" @click="scrollToSection('#projects')">View My Projects</button>
             <div class="bio">
                 <p>I build clean, optimized UIs and thoughtful full-stack applications with a focus on performance and usability.</p>
@@ -142,6 +142,10 @@ onMounted(() => {
     font-weight: 300;
     color: #62ffc1;
     margin-bottom: 3rem;
+}
+
+.title-parentheses {
+    white-space: nowrap;
 }
 
 .btn-glow {
