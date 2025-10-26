@@ -100,7 +100,7 @@ const handleMobileNavClick = async (sectionId) => {
 /* Desktop Navigation */
 .nav-desktop {
     display: flex;
-    gap: 20px;
+    gap: 40px;
     padding: 0;
     margin: 0;
     list-style: none;

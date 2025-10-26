@@ -1,6 +1,6 @@
 <template>
     <div class="contact-section">
-        <h3>I'm open to full-time opportunities and collaborations.</h3>
+        <h3 class="contact-section-title">I'm open to full-time opportunities and collaborations.</h3>
         
         <div class="contact-container">
             <div class="contact-item" v-for="item in contactItems" :key="item.name">
@@ -33,6 +33,11 @@ const contactItems = [
 </script>
 
 <style scoped>
+.contact-section-title {
+    border-bottom: 1px solid #3BD49770;
+    display: inline-block;
+}
+
 .contact-container {
     display: flex;
     flex-wrap: wrap;
