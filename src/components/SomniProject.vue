@@ -1,8 +1,14 @@
 <template>
 	<div class="project">
-		<div class="project-image">
-			<img src="/assets/images/somni.jpg" alt="Somni" width="100%" loading="lazy"/>
-		</div>
+		<button class="project-image" 
+				@click="openModal"
+				@keydown.enter.prevent="openModal"
+				@keydown.space.prevent="openModal"	
+				aria-label="Click to watch demo video"
+		>
+			<img src="/assets/images/somni.png" alt="Somni" width="100%" loading="lazy"/>
+			<span>Watch demo video</span>
+		</button>
 
 		<div class="project-description">
 			<h3 class="project-title">Somni</h3>
@@ -23,7 +29,38 @@
 			</div>
 		</div>
 	</div>
+
+    <!-- Video Modal -->
+    <Modal
+        v-model="isModalOpen"
+        title="Somni demo video"
+        aria-label="Somni demo video"
+    >
+        <div class="video-wrapper">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/vbswZ26iymg?si=-s_vIdQ9a8dGwy4g"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        </div>
+    </Modal>
 </template>
+
+<script setup>
+import { ref } from 'vue'
+import Modal from './Modal.vue'
+
+const isModalOpen = ref(false)
+
+function openModal() {
+	isModalOpen.value = true
+}
+</script>
 
 <style scoped>
 .project {
@@ -38,6 +75,24 @@
 
 .project-image {
 	flex: 0 1 60%;
+	cursor: pointer;
+	background: none;
+	border: none;
+	line-height: 1;
+	color: #ccc;
+
+	& span {
+		transition: all 0.2s ease;
+		display: block;
+		padding: 10px;
+		font-size: 14px;
+		font-style: italic;
+	}
+
+	&:hover {
+		color: var(--accent-color);
+		text-decoration: underline;
+	}
 }
 
 .project-description {
@@ -51,7 +106,8 @@
 	max-width: 800px;
 	border-radius: 10px;
 	border: 0.5px solid #000;
-    box-shadow: 0 0 5px 0 rgba(0 255 221 / 0.7);
+	box-shadow: 0 0 5px 0 rgba(0 255 221 / 0.7);
+	cursor: pointer;
 }
 
 .case-study-link {
@@ -64,4 +120,25 @@
 		gap: 0;
 	}
 }
+
+.video-wrapper {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%; /* 16:9 */
+	overflow: hidden;
+	border-radius: 8px;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.video-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	border: 0;
+}
+
+/* fade transition now provided by Modal.vue too, but keeping here for scope safety if needed */
+/* .fade-* classes may be defined globally in Modal.vue */
 </style>
