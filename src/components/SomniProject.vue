@@ -124,7 +124,7 @@ function openModal() {
 .video-wrapper {
 	position: relative;
 	width: 100%;
-	padding-top: 56.25%; /* 16:9 */
+	padding-top: 70%; /* uses the aspect ratio of the somni video */
 	overflow: hidden;
 	border-radius: 8px;
 	border: 1px solid rgba(255, 255, 255, 0.1);
@@ -138,7 +138,4 @@ function openModal() {
 	height: 100%;
 	border: 0;
 }
-
-/* fade transition now provided by Modal.vue too, but keeping here for scope safety if needed */
-/* .fade-* classes may be defined globally in Modal.vue */
 </style>
