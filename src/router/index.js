@@ -26,6 +26,14 @@ const router = createRouter({
   // Note: 320ms fallback roughly matches the page transition; enough time for mount/layout
   scrollBehavior(to, from, savedPosition) {
     if (savedPosition) {
+      // Delay restoring position when leaving Blog so the page doesn't
+      // scroll while the Blog view is still visible during the leave transition
+      const fromBlog = !!from && ((from.name === 'Blog') || (from.path && from.path.startsWith('/blog')))
+      if (fromBlog) {
+        return new Promise((resolve) => {
+          setTimeout(() => resolve(savedPosition), 320)
+        })
+      }
       return savedPosition
     }
 
@@ -36,6 +44,26 @@ const router = createRouter({
         // Instant scroll from Blog, smooth scroll otherwise
         const fromBlog = !!from && ((from.name === 'Blog') || (from.path && from.path.startsWith('/blog')))
         const behavior = fromBlog ? 'auto' : 'smooth'
+
+        // If coming from Blog, wait for the leave transition to finish first,
+        // then locate the element and scroll. This avoids scrolling the Blog DOM.
+        if (fromBlog) {
+          setTimeout(() => {
+            const el = findEl()
+            if (el) {
+              const navOffsetStr = getComputedStyle(document.documentElement).getPropertyValue('--nav-offset') || '0'
+              const navOffset = parseInt(navOffsetStr, 10) || 0
+              const rect = el.getBoundingClientRect()
+              const top = window.pageYOffset + rect.top - navOffset
+              resolve({ left: 0, top, behavior })
+            } else {
+              resolve(undefined)
+            }
+          }, 320)
+          return
+        }
+
+        // Default behavior on same-page hash navigation
         // Wait a few frames (~16ms each) for the element, then short timeout as fallback
         for (let i = 0; i < 4; i++) {
           await new Promise(requestAnimationFrame)
