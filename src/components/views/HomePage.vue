@@ -178,7 +178,7 @@ onMounted(() => {
 }
 
 .section-card {
-    margin-bottom: 100px;
+    margin-bottom: clamp(30px, 10vw, 100px);
     border: 1px solid #3BD49770;
     background: #00382110;
     box-shadow: 0 0 10px 0 rgba(0 255 221 / 0.11);
