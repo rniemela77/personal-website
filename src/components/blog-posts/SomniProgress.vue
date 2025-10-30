@@ -2,6 +2,19 @@
     <div class="blog-post">
         <h2>Somni</h2>
 
+        <div class="video-wrapper">
+            <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/vbswZ26iymg?si=-s_vIdQ9a8dGwy4g"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                referrerpolicy="strict-origin-when-cross-origin"
+                allowfullscreen
+            ></iframe>
+        </div>
+        
         <p>
             Somni is an AI-powered personality web app that blends psychology and mythology. 
             It features 20 interactive quizzes that use sliders instead of multiple-choice questions 
@@ -72,3 +85,11 @@
 
 <script setup>
 </script>
+
+<style scoped>
+.video-wrapper {
+    display: flex;
+    justify-content: center;
+    background: #000;
+}
+</style>
