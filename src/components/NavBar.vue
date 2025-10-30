@@ -1,10 +1,11 @@
 <template>
     <nav class="navbar">
+        <div class="navbar-content">
         <h1 class="navbar-title" :class="{ visible: showTitle }">
-            <div>
+            <div class="navbar-title-name">
             Robert Niemela
             </div>
-            <div class="text-primary">
+            <div class="navbar-title-subtitle">
             Full-Stack Developer
             </div>
         </h1>
@@ -40,6 +41,7 @@
                         <button @click="handleMobileNavClick(item.href)">{{ item.name }}</button>
                     </li>
                 </ul>
+                </div>
             </div>
         </div>
     </nav>
@@ -115,31 +117,49 @@ onBeforeUnmount(() => {
 <style scoped>
 .navbar {
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding: 20px calc(5% - 20px) 20px calc(5% - 20px);
+    justify-content: center;
     position: sticky;
     top: 0;
+    padding: 0 calc(var(--container-padding) - var(--nav-padding));
     z-index: 100;
     background: rgba(26, 26, 26, 0.9);
     backdrop-filter: blur(30px);
+}
+
+.navbar-content {
+    width:100%;
+    display: flex;
+    justify-content: space-between;
     min-height: 44px;
+    max-width: calc(var(--container-width) + calc(var(--nav-padding) * 2));
+    padding: 5px 0;
 }
 
 .navbar-title {
-    padding-left: calc(5% - 20px);
+    padding-left: calc(var(--container-padding) - var(--nav-padding));
     margin: 0;
     font-size: 14px;
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity 250ms ease, transform 250ms ease;
 }
+
+.font-weight-light {
+    font-weight: 400;
+}
+
 .navbar-title.visible {
     opacity: 1;
     transform: translateY(0);
 }
-.text-primary {
+
+.navbar-title-name {
+    font-size: 16px;
+}
+
+.navbar-title-subtitle {
     color: var(--accent-color);
+    font-weight: 400;
 }
 
 /* Desktop Navigation */
@@ -160,7 +180,7 @@ onBeforeUnmount(() => {
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
-    padding: 10px 20px;
+    padding: 10px var(--nav-padding);
     margin: 0;
 }
 
@@ -181,11 +201,17 @@ onBeforeUnmount(() => {
     cursor: pointer;
     padding: 0;
     z-index: 101;
+    margin-top: 6px;
+    margin-right: var(--nav-padding);
+
+    &:hover .hamburger-line {
+        background: var(--accent-color);
+    }
 }
 
 .hamburger-line {
     width: 100%;
-    height: 3px;
+    height: 2px;
     background-color: #fff;
     border-radius: 2px;
     transition: all 0.3s ease;
@@ -234,7 +260,7 @@ onBeforeUnmount(() => {
     height: 100vh;
     background: rgba(26, 26, 26, 0.95);
     backdrop-filter: blur(20px);
-    padding: 80px 40px 40px 40px;
+    padding: 80px var(--nav-padding) 40px var(--nav-padding);
     transform: translateX(100%);
     transition: transform 0.3s ease;
 }
@@ -278,7 +304,10 @@ onBeforeUnmount(() => {
     }
 
     .navbar-title {
-        display: block;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding-left: var(--nav-padding);
     }
     
     .nav-desktop {

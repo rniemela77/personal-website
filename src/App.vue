@@ -44,6 +44,9 @@ onBeforeUnmount(() => {
 
 :root {
     --accent-color: #3BD496;
+    --container-width: 1200px;
+    --container-padding: 5%;
+    --nav-padding: 20px;
 }
 html, body {
     background-color: #1a1a1a;
@@ -81,9 +84,9 @@ a {
 }
 
 .container {
-    max-width: 1200px;
+    max-width: var(--container-width);
     margin: 0 auto;
-    padding: 0 5% 5% 5%;
+    padding: 0 var(--container-padding) var(--container-padding) var(--container-padding);
 }
 
 .section-title {
@@ -114,12 +117,6 @@ a {
 .page-leave-from {
     opacity: 1;
     transform: translateX(0);
-}
-
-@media (max-width: 768px) {
-    #app {
-        padding: 2.5%;
-    }
 }
 
 .text-muted {

@@ -198,7 +198,7 @@ onMounted(() => {
 }
 
 .btn-primary {
-    background: #3BD496;
+    background: var(--accent-color);
     color: #000;
     border: 1px solid transparent;
     border-radius: 5px;

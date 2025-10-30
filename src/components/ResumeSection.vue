@@ -25,7 +25,7 @@
 .resume-link {
     text-decoration: none;
     padding: 10px 20px;
-    background: #3BD496;
+    background: var(--accent-color);
     color: #000;
     border: 1px solid transparent;
     border-radius: 5px;
