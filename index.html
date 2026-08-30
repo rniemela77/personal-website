@@ -26,7 +26,9 @@
         <div class="rule-thick"></div>
         <div class="masthead">
           <span>Robert Niemela</span>
-          <span class="masthead-meta">Front-end engineer · Phoenix, AZ · Remote</span>
+          <span class="masthead-meta">
+            Front-end engineer<span class="masthead-dot" aria-hidden="true"> · </span><span class="masthead-loc">Phoenix, AZ · Remote</span>
+          </span>
         </div>
         <div class="rule"></div>
         <nav class="site-nav">
@@ -49,24 +51,22 @@
       <section id="work" class="work">
         <h2 class="section-label">Selected work</h2>
         <div class="work-list">
-          <a href="#dealership" class="work-row work-row-undated">
-            <div>
+          <a href="#dealership" class="work-row">
+            <div class="work-main">
               <h3>A new app on a legacy backend</h3>
               <p class="work-org">A SaaS product for automotive dealerships · sole frontend developer</p>
             </div>
             <p class="work-blurb">New UX and features, built on backend code inherited from the old app. I chose the framework, wrote the API spec, and led the product design.</p>
           </a>
           <a href="#goodwill" class="work-row">
-            <span class="work-year">2022-25</span>
-            <div>
+            <div class="work-main">
               <h3>Migrating off the monolith</h3>
               <p class="work-org">Goodwill of Central &amp; Northern Arizona</p>
             </div>
             <p class="work-blurb">A PHP and jQuery frontend moved to modular Vue applications, one feature flag at a time, with 8,000 lines of Sass rebuilt as a design system along the way.</p>
           </a>
           <a href="#somni" class="work-row">
-            <span class="work-year">2025</span>
-            <div>
+            <div class="work-main">
               <h3>Somni</h3>
               <p class="work-org">Personal product · somni.quest</p>
             </div>
@@ -93,12 +93,18 @@
             <p>The frontend foundation is mine: routing, global styling, design tokens, responsive navigation, and the component patterns the rest of the team works inside. I also led the product design with a VP and the product owner, delivering wireframes, mockups and prototypes, which meant implementation questions got settled during design instead of coming back later as rework.</p>
           </div>
           <div class="case-meta">
-            <p class="meta-label">Role</p>
-            <p class="meta-value">UX Developer, sole frontend</p>
-            <p class="meta-label">Stack</p>
-            <p class="meta-value">Vue 3, TypeScript, Inertia.js, Tailwind, Laravel</p>
-            <p class="meta-label">Owned</p>
-            <p class="meta-value">Architecture, API specification, framework evaluation, product design</p>
+            <div class="meta-item">
+              <p class="meta-label">Role</p>
+              <p class="meta-value">UX Developer, sole frontend</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Vue 3, TypeScript, Inertia.js, Tailwind, Laravel</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Owned</p>
+              <p class="meta-value">Architecture, API specification, framework evaluation, product design</p>
+            </div>
             <p class="pullquote">I wrote the API spec so both sides could build in parallel, then built against it. The contract was mine before the code was.</p>
           </div>
         </div>
@@ -120,12 +126,18 @@
             <p>I was promoted from Junior Developer about a year in. After a restructuring I took on release documentation and planning, and mentored teammates through whiteboarding, Notion docs and demos. Three years in, the migration had moved the parts of the app people used most off the monolith.</p>
           </div>
           <div class="case-meta">
-            <p class="meta-label">Role</p>
-            <p class="meta-value">Software Engineer, 2022-2025</p>
-            <p class="meta-label">Stack</p>
-            <p class="meta-value">Vue 2, Pinia, Vue Router, Sass, Laravel, MySQL, Cypress</p>
-            <p class="meta-label">Owned</p>
-            <p class="meta-value">Migration strategy, design system refactor, E2E coverage, mentoring</p>
+            <div class="meta-item">
+              <p class="meta-label">Role</p>
+              <p class="meta-value">Software Engineer, 2022-2025</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Vue 2, Pinia, Vue Router, Sass, Laravel, MySQL, Cypress</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Owned</p>
+              <p class="meta-value">Migration strategy, design system refactor, E2E coverage, mentoring</p>
+            </div>
             <p class="pullquote">The two frontends had to coexist, so every feature shipped behind a flag and nothing was ever a one-way door.</p>
           </div>
         </div>
@@ -156,14 +168,22 @@
             <p>It's live at <a href="https://somni.quest" class="rn-link">somni.quest</a>. Have a look and tell me what you think.</p>
           </div>
           <div class="case-meta">
-            <p class="meta-label">Role</p>
-            <p class="meta-value">Everything</p>
-            <p class="meta-label">Stack</p>
-            <p class="meta-value">Vue 3, TypeScript, Pinia, Vue Router, Firebase, Netlify Functions, Stripe, OpenAI API</p>
-            <p class="meta-label">Year</p>
-            <p class="meta-value">2025</p>
-            <p class="meta-label">Live</p>
-            <p class="meta-value"><a href="https://somni.quest" class="rn-link">somni.quest</a></p>
+            <div class="meta-item">
+              <p class="meta-label">Role</p>
+              <p class="meta-value">Everything</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Stack</p>
+              <p class="meta-value">Vue 3, TypeScript, Pinia, Vue Router, Firebase, Netlify Functions, Stripe, OpenAI API</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Year</p>
+              <p class="meta-value">2025</p>
+            </div>
+            <div class="meta-item">
+              <p class="meta-label">Live</p>
+              <p class="meta-value"><a href="https://somni.quest" class="rn-link">somni.quest</a></p>
+            </div>
             <p class="pullquote">Getting the model to answer the way I wanted was most of the work.</p>
           </div>
         </div>
@@ -179,12 +199,18 @@
           <p>A.A.S. in Web Design, Mesa Community College. Based in Phoenix, AZ. Remote.</p>
         </div>
         <div class="about-skills">
-          <p class="meta-label">Frontend</p>
-          <p class="meta-value">Vue 2 &amp; 3, Nuxt, TypeScript, JavaScript, Sass, Tailwind, Pinia, Vue Router</p>
-          <p class="meta-label">Backend &amp; data</p>
-          <p class="meta-value">Laravel, Inertia.js, PHP, MySQL, Eloquent, REST API design</p>
-          <p class="meta-label">Tooling</p>
-          <p class="meta-value">Cypress, Jest, Vite, Webpack, Git, CI/CD, Figma</p>
+          <div class="meta-item">
+            <p class="meta-label">Frontend</p>
+            <p class="meta-value">Vue 2 &amp; 3, Nuxt, TypeScript, JavaScript, Sass, Tailwind, Pinia, Vue Router</p>
+          </div>
+          <div class="meta-item">
+            <p class="meta-label">Backend &amp; data</p>
+            <p class="meta-value">Laravel, Inertia.js, PHP, MySQL, Eloquent, REST API design</p>
+          </div>
+          <div class="meta-item">
+            <p class="meta-label">Tooling</p>
+            <p class="meta-value">Cypress, Jest, Vite, Webpack, Git, CI/CD, Figma</p>
+          </div>
         </div>
       </section>
 
