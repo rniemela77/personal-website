@@ -16,6 +16,18 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 0.08;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='180' height='180'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.68' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 180px 180px;
+  animation: rn-grain 40s linear infinite;
+}
+
 a {
   color: #b4472e;
   text-decoration: none;
@@ -51,6 +63,8 @@ h3 {
 }
 
 .page {
+  position: relative;
+  z-index: 1;
   max-width: 1180px;
   margin: 0 auto;
   padding-left: max(clamp(24px, 5.5vw, 40px), env(safe-area-inset-left, 0px));
@@ -183,7 +197,12 @@ h3 {
   gap: 40px;
   color: inherit;
   align-items: start;
-  transition: opacity 200ms ease;
+  transition: transform 220ms cubic-bezier(0.2, 0.7, 0.2, 1), opacity 200ms ease;
+}
+
+.work-row:hover,
+.work-row:focus-visible {
+  color: inherit;
 }
 
 .work-row h3 {
@@ -191,6 +210,7 @@ h3 {
   font-size: clamp(26px, 3.4vw, 38px);
   line-height: 1.1;
   letter-spacing: -0.015em;
+  transition: color 180ms ease;
 }
 
 .work-org {
@@ -204,6 +224,29 @@ h3 {
   font-size: 18px;
   line-height: 1.65;
   max-width: 38ch;
+}
+
+@media (hover: hover) {
+  .work-list:hover .work-row {
+    opacity: 0.38;
+  }
+
+  .work-list:hover .work-row:hover {
+    opacity: 1;
+    transform: translateX(6px);
+  }
+
+  .work-row:hover h3 {
+    color: #b4472e;
+  }
+}
+
+.work-row:focus-visible {
+  transform: translateX(6px);
+}
+
+.work-row:focus-visible h3 {
+  color: #b4472e;
 }
 
 .case {
@@ -426,6 +469,32 @@ h3 {
   }
   to {
     opacity: 1;
+    transform: none;
+  }
+}
+
+@keyframes rn-grain {
+  to {
+    background-position: 180px 180px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .hero {
+    animation: none;
+  }
+
+  body::before {
+    animation: none;
+  }
+
+  .work-row,
+  .work-list:hover .work-row:hover,
+  .work-row:focus-visible {
     transform: none;
   }
 }
