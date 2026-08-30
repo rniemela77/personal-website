@@ -8,6 +8,10 @@ html {
   scroll-behavior: smooth;
 }
 
+:root {
+  --measure: 40rem;
+}
+
 body {
   margin: 0;
   background: #f3f2f2;
@@ -161,7 +165,7 @@ h3 {
   margin: 0 0 20px;
   font-size: 19px;
   line-height: 1.7;
-  max-width: 40ch;
+  max-width: var(--measure);
 }
 
 .hero p:last-child {
@@ -223,7 +227,7 @@ h3 {
   margin: 0;
   font-size: 18px;
   line-height: 1.65;
-  max-width: 38ch;
+  max-width: var(--measure);
 }
 
 @media (hover: hover) {
@@ -290,7 +294,7 @@ h3 {
   margin: 0 0 clamp(24px, 4vw, 44px);
   font-size: clamp(18px, 2vw, 22px);
   line-height: 1.6;
-  max-width: 56ch;
+  max-width: var(--measure);
 }
 
 .case-grid {
@@ -301,7 +305,7 @@ h3 {
 }
 
 .case-copy {
-  max-width: 62ch;
+  max-width: var(--measure);
 }
 
 .case-copy h3 {
@@ -375,14 +379,15 @@ h3 {
 .somni-hero img {
   width: 100%;
   height: auto;
-  border-radius: 2px;
+  border-radius: 10px;
 }
 
 .somni-caption {
   margin: 0 0 clamp(36px, 6vw, 76px);
   font-size: 16px;
   color: #605d5d;
-  max-width: 52ch;
+  max-width: var(--measure);
+  text-align: left;
 }
 
 .about {
@@ -402,29 +407,45 @@ h3 {
   font-weight: 400;
 }
 
-.about-intro {
+.about-copy {
+  max-width: var(--measure);
+}
+
+.about-copy p {
+  margin: 0 0 26px;
+  font-size: 19px;
+  line-height: 1.75;
+}
+
+.about-copy p:last-child {
+  margin-bottom: 0;
+}
+
+.about-copy .about-intro {
   margin: 0 0 26px;
   font-size: clamp(20px, 2.1vw, 24px);
   line-height: 1.55;
   letter-spacing: -0.01em;
 }
 
-.about p {
-  margin: 0 0 26px;
-  font-size: 19px;
-  line-height: 1.75;
-  max-width: 62ch;
-}
-
-.about p:last-child {
-  margin-bottom: 0;
-}
-
 .about-skills {
   font-size: 17px;
-  line-height: 1.9;
+  line-height: 1.55;
   color: #444141;
   padding-top: 56px;
+}
+
+.about-skills .meta-label {
+  margin-bottom: 6px;
+  line-height: 1.3;
+}
+
+.about-skills .meta-value {
+  margin-bottom: 28px;
+}
+
+.about-skills .meta-item:last-child .meta-value {
+  margin-bottom: 0;
 }
 
 .site-footer {
@@ -624,10 +645,6 @@ h3 {
   .work-row {
     grid-template-columns: 1fr;
     gap: 12px;
-  }
-
-  .work-blurb {
-    max-width: none;
   }
 
   .footer-links {
